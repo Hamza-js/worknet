@@ -1,0 +1,12 @@
+{
+  "HomePage": {
+    "home": "Գլխավոր էջ",
+    "jobs": "Աշխատանք",
+    "searchEmployees": "Աշխատողների որոնում",
+    "employers": "Գործատուներ",
+    "companies": "Ընկերություններ",
+    "login": "Մուտք",
+    "register": "Գրանցվել",
+    "language": "Լեզու"
+  }
+}

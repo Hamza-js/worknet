@@ -1,0 +1,12 @@
+{
+  "HomePage": {
+    "home": "Home",
+    "jobs": "Jobs",
+    "searchEmployees": "Search Employees",
+    "employers": "Employers",
+    "companies": "Companies",
+    "login": "Login",
+    "register": "Register",
+    "language": "Language"
+  }
+}
