@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
+import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/shared/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -29,7 +31,16 @@ export default async function LocaleLayout({
     <html lang={locale} className={montserrat.className}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <div className="fixed top-0 left-0 w-full z-50">
+            <Navbar isLoggedIn={false} />
+          </div>
+          {
+            <div className="pt-20">
+              {" "}
+              {children}
+              <Footer />
+            </div>
+          }
         </NextIntlClientProvider>
       </body>
     </html>

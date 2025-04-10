@@ -64,5 +64,17 @@
         }
       }
     }
+  },
+  "JobsPage": {
+    "title": "Job Announcements",
+    "description": "Jobs, vacancies, job announcements in Armenia, Yerevan and regions...",
+    "HomePage": "Home Page",
+    "work": "Work",
+    "searchPlaceHolder": "Search for a job post, e.g., developer",
+    "serach": "Search",
+    "Filter": "Filter",
+    "region": "Region",
+    "field": "Field",
+    "graphic": "Schedule"
   }
 }

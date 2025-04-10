@@ -14,22 +14,13 @@ export default async function HomePage() {
 
   return (
     <div className="">
-      <div className="fixed top-0 left-0 w-full z-50">
-        <Navbar isLoggedIn={false} />
-      </div>
+      <HeroSection />
 
-      {/* Adjust padding-top to match the height of your navbar */}
-      <div className="pt-20">
-        <HeroSection />
+      <LogoCarousel />
 
-        <LogoCarousel />
+      <CompanyGrid />
 
-        <CompanyGrid />
-
-        <JobGrid />
-
-        <Footer />
-      </div>
+      <JobGrid />
     </div>
   );
 }

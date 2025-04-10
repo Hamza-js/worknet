@@ -18,15 +18,15 @@ export default function JobCard({
   link = "#",
 }: JobCardProps) {
   return (
-    <div className="bg-white rounded-xl p-4 py-5 flex items-center border border-[#EAEAEA] justify-between w-full">
+    <div className="bg-white rounded-md  p-5 flex items-center border border-[#EAEAEA] justify-between w-full">
       {/* Left: Logo & Info */}
       <div className="flex items-center gap-4">
-        <div className="w-12 h-12 mr-6 rounded-full bg-white border border-[#999BA7] flex items-center justify-center overflow-hidden">
+        <div className="w-10 h-10 mr-6 rounded-full bg-white border border-[#999BA7] flex items-center justify-center overflow-hidden">
           <Image
             src={logo}
             alt={company}
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             className="object-contain"
           />
         </div>
