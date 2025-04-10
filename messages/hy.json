@@ -7,6 +7,67 @@
     "companies": "Ընկերություններ",
     "login": "Մուտք",
     "register": "Գրանցվել",
-    "language": "Լեզու"
+    "language": "Լեզու",
+    "heroTitle": "Աշխատանքի ֆոտրումը",
+    "heroSubtitle": "առցանց հարթակ",
+    "heroDescription": "Աշխատանքներ | Թափուր հաստիքներ Հայաստանում",
+    "heroSearchPlaceholder": "Որոնել մասնագիտությամբ",
+    "heroCityPlaceholder": "Քաղաք",
+    "heroSearchButton": "Փնտրել",
+    "heroExperience": "9+ տարի",
+    "heroExperienceDes": "ոլորտում",
+    "heroUsers": "Օգտատերեր",
+    "heroEmployers": "Գործատուներ",
+    "cities": {
+      "yerevan": "Երևան",
+      "gyumri": "Գյումրի",
+      "vanadzor": "Վանաձոր"
+    },
+    "companyGrid": {
+      "title": "Ընկերություններ",
+      "description": "Աշխատանքի առաջարկներ առաջատար ընկերությունների կողմից",
+      "viewMore": "Դիտել ավելին"
+    },
+    "companyCard": {
+      "view": "Պահել"
+    },
+    "jobsGrid": {
+      "title": "աշխատանքի հատարարություններ",
+      "description": "Աշխատանք, թափուր աշխատատեղեր, աշխատանքի հայտարարություններ Հայաստանում, Երևանում և մարզերում․․․",
+      "viewMore": "Դիտել ավելին"
+    },
+    "jobCard": {
+      "view": "Դիտել"
+    },
+    "footer": {
+      "about": {
+        "description": "Worknet – ամենահավաստի աշխատանքային որոնման հարթակը",
+        "copyright": "© 2016-2024 Worknet.am"
+      },
+      "sections": {
+        "jobs": {
+          "title": "Հիմնական",
+          "items": [
+            "Աշխատանք",
+            "Գործատուներ",
+            "Աշխատակիցների որոնում",
+            "Բիզնես փաթեթներ"
+          ]
+        },
+        "other": {
+          "title": "Այլ",
+          "items": [
+            "Օգտագործման պայմաններ",
+            "Հաճախ տրվող հարցեր",
+            "Օգնություն",
+            "Հաճախ տրվող հարցեր"
+          ]
+        },
+        "social": {
+          "title": "Սոց. հղումներ",
+          "items": ["LinkedIn", "Instagram", "Facebook", "Tiktok"]
+        }
+      }
+    }
   }
 }

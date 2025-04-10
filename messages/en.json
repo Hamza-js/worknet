@@ -7,6 +7,62 @@
     "companies": "Companies",
     "login": "Login",
     "register": "Register",
-    "language": "Language"
+    "language": "Language",
+    "heroTitle": "Job Search",
+    "heroSubtitle": "Online Platform",
+    "heroDescription": "Jobs | Vacancies in Armenia",
+    "heroSearchPlaceholder": "Search by profession",
+    "heroCityPlaceholder": "City",
+    "heroSearchButton": "Search",
+    "heroExperience": "9+ years",
+    "heroExperienceDes": "in the field",
+    "heroUsers": "Users",
+    "heroEmployers": "Employers",
+    "cities": {
+      "yerevan": "Yerevan",
+      "gyumri": "Gyumri",
+      "vanadzor": "Vanadzor"
+    },
+    "companyGrid": {
+      "title": "Companies",
+      "description": "List of active companies in recent months",
+      "viewMore": "View more"
+    },
+    "companyCard": {
+      "view": "Save"
+    },
+    "jobsGrid": {
+      "title": "Job Listings",
+      "description": "Jobs, open positions, and job announcements in Armenia, Yerevan, and regions...",
+      "viewMore": "View more"
+    },
+    "jobCard": {
+      "view": "View"
+    },
+    "footer": {
+      "about": {
+        "description": "Worknet – the most trusted job search platform",
+        "copyright": "© 2016-2024 Worknet.am"
+      },
+      "sections": {
+        "jobs": {
+          "title": "Jobs",
+          "items": ["All Jobs", "Companies", "Jobs by Category", "Remote Jobs"]
+        },
+        "other": {
+          "title": "Other",
+          "items": [
+            "Resume Templates",
+            "Frequently Asked Questions",
+            "Support",
+            "Ask a Question"
+          ]
+        },
+        "social": {
+          "title": "Follow Us",
+          "items": ["LinkedIn", "Instagram", "Facebook", "Tiktok"]
+        }
+      }
+    }
   }
 }

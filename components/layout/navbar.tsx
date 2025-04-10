@@ -10,28 +10,27 @@ const Navbar = async ({ isLoggedIn }: { isLoggedIn: boolean }) => {
   const t = await getTranslations("HomePage");
 
   return (
-    <nav className="w-full bg-[#FAFDFF] border-b border-[#F1F1F1] shadow-sm px-10 py-4 flex justify-between items-center">
+    <nav className="w-full bg-[#FAFDFF] border-b border-[#F1F1F1] px-10 py-4 flex justify-between items-center">
       <div className="flex items-center space-x-4">
         <Image src={logo} width={100} height={50} alt="logo" />
 
         <span className="ml-6 mr-10">
           <LocaleSwitcher />
         </span>
-
-        {!isLoggedIn && (
-          <div className="hidden md:flex space-x-6 font-medium text-[16px] leading-[16px] tracking-[0] text-center">
-            <a href="#">{t("home")}</a>
-            <a href="#">{t("jobs")}</a>
-            <a href="#">{t("searchEmployees")}</a>
-            <a href="#">{t("employers")}</a>
-            <a href="#">{t("companies")}</a>
-          </div>
-        )}
       </div>
 
       <div className="flex items-center space-x-4">
         {!isLoggedIn ? (
           <>
+            {!isLoggedIn && (
+              <div className="hidden md:flex space-x-8 font-medium text-[14px] text-black leading-[16px] tracking-[0] text-center mr-20">
+                <a href="#">{t("home")}</a>
+                <a href="#">{t("jobs")}</a>
+                <a href="#">{t("searchEmployees")}</a>
+                <a href="#">{t("employers")}</a>
+                <a href="#">{t("companies")}</a>
+              </div>
+            )}
             <Button variant="secondary" size="small">
               {t("login")}
             </Button>
