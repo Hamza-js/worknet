@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Bookmark, FileText } from "lucide-react";
+import { BookmarkMinus, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 interface CompanyCardProps {
@@ -9,13 +9,13 @@ interface CompanyCardProps {
   jobsCount?: number;
 }
 
-export default function CompanyCard({
+export default function EmployeeCard({
   logo,
   name,
   industry,
   jobsCount = 3,
 }: CompanyCardProps) {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("EmployeesPage");
 
   return (
     <div className="relative bg-white p-5 rounded-2xl border border-[#EAEAEA] w-full max-w-[240px] text-center">
@@ -30,8 +30,8 @@ export default function CompanyCard({
           <Image
             src={logo}
             alt={name}
-            width={55}
-            height={55}
+            width={60}
+            height={60}
             className="object-contain"
           />
         </div>
@@ -62,15 +62,15 @@ export default function CompanyCard({
       </div>
 
       {/* Bottom row */}
-      <div className="flex items-center justify-between text-[#999BA7] text-sm mt-4 px-1">
-        <div className="flex items-center gap-1">
-          <FileText size={16} />
-          {jobsCount}
+      <div className="flex items-center justify-between text-[#999BA7] text-xs mt-4 px-1">
+        <div className="flex items-center justify-center gap-1">
+          <Mail size={15} color="#999BA7" className="mb-1" />
+          {t("letter")}
         </div>
         <span className="bg-[#999BA7] w-[1px] h-6"></span>
-        <div className="flex items-center gap-1 text-[#00C896] font-medium">
-          <Bookmark size={16} color="#999BA7" />
-          {t("companyCard.view")}
+        <div className="flex items-center justify-center gap-1 text-[#00C896] font-medium">
+          <BookmarkMinus size={15} color="#999BA7" className="mb-1" />
+          {t("save")}
         </div>
       </div>
     </div>

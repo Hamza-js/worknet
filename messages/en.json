@@ -56,15 +56,15 @@
     "jobs": "Jobs",
     "searchEmployees": "Search Employees",
     "employers": "Employers",
-    "companies": "Companies",
+    "packages": "Packages",
     "login": "Login",
     "register": "Register",
     "language": "Language",
     "heroTitle": "Job Search",
-    "heroSubtitle": "Online Platform",
+    "heroSubtitle": "online platform",
     "heroDescription": "Jobs | Vacancies in Armenia",
-    "heroSearchPlaceholder": "Search by profession",
-    "heroCityPlaceholder": "City",
+    "heroSearchPlaceholder": "Job title",
+    "heroCityPlaceholder": "Category",
     "heroSearchButton": "Search",
     "heroExperience": "9+ years",
     "heroExperienceDes": "in the field",
@@ -77,15 +77,15 @@
     },
     "companyGrid": {
       "title": "Companies",
-      "description": "List of active companies in recent months",
+      "description": "Job offers from leading companies",
       "viewMore": "View more"
     },
     "companyCard": {
       "view": "Save"
     },
     "jobsGrid": {
-      "title": "Job Listings",
-      "description": "Jobs, open positions, and job announcements in Armenia, Yerevan, and regions...",
+      "title": "Job Announcements",
+      "description": "Jobs, vacancies, job postings in Armenia, Yerevan and regions...",
       "viewMore": "View more"
     },
     "jobCard": {
@@ -93,25 +93,25 @@
     },
     "footer": {
       "about": {
-        "description": "Worknet – the most trusted job search platform",
+        "description": "\"Worknet\" — your online job search platform",
         "copyright": "© 2016-2024 Worknet.am"
       },
       "sections": {
         "jobs": {
-          "title": "Jobs",
-          "items": ["All Jobs", "Companies", "Jobs by Category", "Remote Jobs"]
+          "title": "Main",
+          "items": [
+            "Jobs",
+            "Employers",
+            "Search Employees",
+            "Business Packages"
+          ]
         },
         "other": {
           "title": "Other",
-          "items": [
-            "Resume Templates",
-            "Frequently Asked Questions",
-            "Support",
-            "Ask a Question"
-          ]
+          "items": ["Terms of Use", "FAQ", "Help", "FAQ"]
         },
         "social": {
-          "title": "Follow Us",
+          "title": "Social Links",
           "items": ["LinkedIn", "Instagram", "Facebook", "Tiktok"]
         }
       }
@@ -128,5 +128,31 @@
     "region": "Region",
     "field": "Field",
     "graphic": "Schedule"
+  },
+  "EmployeesPage": {
+    "title": "Employee Search",
+    "description": "Employee search, CV applications, resumes, HR candidates…",
+    "HomePage": "Home Page",
+    "employees": "employee search",
+    "searchPlaceHolder": "Search for a job post, e.g., developer",
+    "serach": "Search",
+    "Filter": "Filter",
+    "region": "Region",
+    "field": "Field",
+    "graphic": "Schedule",
+    "letter": "Message",
+    "save": "Save"
+  },
+  "EmployersPage": {
+    "title": "Companies",
+    "description": "Jobs, vacancies, job announcements in Armenia, Yerevan, and the regions...",
+    "HomePage": "Home Page",
+    "employers": "Companies",
+    "searchPlaceHolder": "Search for a listing, e.g., developer",
+    "serach": "Search",
+    "Filter": "Filter",
+    "field": "Field",
+    "count": "Message",
+    "save": "Save"
   }
 }

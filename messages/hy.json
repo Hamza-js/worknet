@@ -53,21 +53,21 @@
   "HomePage": {
     "home": "Գլխավոր էջ",
     "jobs": "Աշխատանք",
-    "searchEmployees": "Աշխատողների որոնում",
+    "searchEmployees": "Աշխատակիցների որոնում",
     "employers": "Գործատուներ",
-    "companies": "Ընկերություններ",
-    "login": "Մուտք",
-    "register": "Գրանցվել",
+    "packages": "Փաթեթներ",
+    "login": "Գրանցվել",
+    "register": "Մուտք",
     "language": "Լեզու",
-    "heroTitle": "Աշխատանքի ֆոտրումը",
+    "heroTitle": "ԱՇխատանքի փնտրման",
     "heroSubtitle": "առցանց հարթակ",
-    "heroDescription": "Աշխատանքներ | Թափուր հաստիքներ Հայաստանում",
-    "heroSearchPlaceholder": "Որոնել մասնագիտությամբ",
-    "heroCityPlaceholder": "Քաղաք",
+    "heroDescription": "Աշխատանք | Թափուր հաստիքներ Հայաստանում",
+    "heroSearchPlaceholder": "Աշխատանի անվանում",
+    "heroCityPlaceholder": "Բաժին",
     "heroSearchButton": "Փնտրել",
     "heroExperience": "9+ տարի",
     "heroExperienceDes": "ոլորտում",
-    "heroUsers": "Օգտատերեր",
+    "heroUsers": "Օգտվող",
     "heroEmployers": "Գործատուներ",
     "cities": {
       "yerevan": "Երևան",
@@ -92,8 +92,8 @@
     },
     "footer": {
       "about": {
-        "description": "Worknet – ամենահավաստի աշխատանքային որոնման հարթակը",
-        "copyright": "© 2016-2024 Worknet.am"
+        "description": "«Worknet» աշխատանքի որոնման քո օնլայն հարթակը",
+        "copyright": "© 2016-2024 Worknet.am "
       },
       "sections": {
         "jobs": {
@@ -132,5 +132,31 @@
     "region": "տարածաշրջան",
     "field": "ոլորտ",
     "graphic": "Գրաֆիկ"
+  },
+  "EmployeesPage": {
+    "title": "Աշխատակիցների որոնում",
+    "description": "Աշխատակիցների որոնում, ինքնակենսագրական հայտեր, ռեզյումե, կադրային թեկնածուներ․․․",
+    "HomePage": "Գլխավոր էջ",
+    "employees": "աշխատակիցների որոնում",
+    "searchPlaceHolder": "Փնտրի’ր հայտարարություն, օրինակ՝ ծրագրավորող",
+    "serach": "Որոնել",
+    "Filter": "Ֆիլտր",
+    "region": "տարածաշրջան",
+    "field": "ոլորտ",
+    "graphic": "Գրաֆիկ",
+    "letter": "Նամակ",
+    "save": "Պահել"
+  },
+  "EmployersPage": {
+    "title": "Ձեռնարկություններ",
+    "description": "Աշխատանք, թափուր աշխատատեղեր, աշխատանքի հայտարարություններ Հայաստանում, Երևանում և մարզերում․․․",
+    "HomePage": "Գլխավոր էջ",
+    "employers": "Ձեռնարկություններ",
+    "searchPlaceHolder": "Փնտրի’ր հայտարարություն, օրինակ՝ ծրագրավորող",
+    "serach": "Որոնել",
+    "Filter": "Ֆիլտր",
+    "field": "ոլորտ",
+    "count": "Նամակ",
+    "save": "Պահել"
   }
 }

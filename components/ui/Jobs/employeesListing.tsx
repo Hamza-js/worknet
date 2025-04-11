@@ -1,24 +1,68 @@
 "use client";
 
-import { useState } from "react";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   ChevronDown,
-  ChevronRight,
   ChevronLeft,
+  ChevronRight,
   MapPin,
   Search,
   SlidersHorizontal,
 } from "lucide-react";
 import JobCard from "@/components/shared/JobCard";
+import EmployeeCard from "@/components/shared/EmployeeCard";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
+import CompanyCard from "@/components/shared/CompanyCard";
 
-export default function JobListings() {
+const employees = Array.from({ length: 50 }, (_, i) => {
+  const names = [
+    "Ani Harutyunyan",
+    "Gor Petrosyan",
+    "Sona Melkonyan",
+    "Artur Sargsyan",
+    "Lilit Karapetyan",
+    "Hayk Grigoryan",
+    "Narek Avetisyan",
+    "Mariam Hakobyan",
+    "Arman Mkrtchyan",
+    "Tatev Vardanyan",
+  ];
+
+  const industries = [
+    "Frontend Developer at WorkNet",
+    "Backend Engineer at DataStorm",
+    "UI/UX Designer at Creatix",
+    "DevOps Engineer at CloudBridge",
+    "Project Manager at SoftSpace",
+    "Mobile Developer at Appify",
+    "QA Engineer at BugSmash",
+    "Data Analyst at InsightPro",
+    "Marketing Specialist at Brandify",
+    "Support Lead at HelpForce",
+  ];
+
+  return {
+    logo: `https://randomuser.me/api/portraits/${
+      i % 2 === 0 ? "women" : "men"
+    }/${i % 100}.jpg`,
+    name: names[i % names.length],
+    industry: industries[i % industries.length],
+  };
+});
+
+export default function EmployeesListing() {
   const t = useTranslations("JobsPage");
-
-  const pageSize = 14;
+  const pageSize = 8;
   const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(employees.length / pageSize);
+
+  const paginatedEmployees = employees.slice(
+    (currentPage - 1) * pageSize,
+    currentPage * pageSize
+  );
 
   const cities = [
     "Երևան",
@@ -36,71 +80,25 @@ export default function JobListings() {
     "Արցախ",
   ];
 
-  const jobs = Array.from({ length: 50 }, (_, i) => ({
-    logo: `https://logo.clearbit.com/${
-      [
-        "google.com",
-        "facebook.com",
-        "netflix.com",
-        "microsoft.com",
-        "apple.com",
-        "airbnb.com",
-        "spotify.com",
-        "uber.com",
-        "linkedin.com",
-        "adobe.com",
-      ][i % 10]
-    }`,
-    position: [
-      "Frontend Developer",
-      "Backend Engineer",
-      "UI/UX Designer",
-      "DevOps Specialist",
-      "QA Tester",
-      "Product Manager",
-      "Support Agent",
-      "Marketing Manager",
-      "Sales Executive",
-      "Mobile Developer",
-    ][i % 10],
-    company: [
-      "Google",
-      "Facebook",
-      "Netflix",
-      "Microsoft",
-      "Apple",
-      "Airbnb",
-      "Spotify",
-      "Uber",
-      "LinkedIn",
-      "Adobe",
-    ][i % 10],
-  }));
-
-  const totalPages = Math.ceil(jobs.length / pageSize);
-  const paginatedJobs = jobs.slice(
-    (currentPage - 1) * pageSize,
-    currentPage * pageSize
-  );
-
   return (
-    <div className="flex flex-col md:flex-row gap-6 py-20">
+    <div className="flex flex-col md:flex-row gap-6 py-20 ">
       {/* Sidebar Filters */}
-      <aside className="w-full md:w-1/4 space-y-2">
+      <aside className="w-full md:w-1/4  space-y-2">
         <h2 className="text-md font-semibold bg-white rounded-md p-[11px] border border-[#EAEAEA]">
           {t("Filter")}
         </h2>
 
-        {/* Location Filter */}
+        {/* Location */}
         <div className="bg-white rounded-md border p-4">
           <details open>
             <summary className="flex items-center justify-between cursor-pointer font-medium text-sm text-[#1C1B1B]">
               <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-gray-500" />
-                {t("region")}
+                {t("field")}
               </span>
               <ChevronDown className="w-4 h-4 text-gray-500" />
             </summary>
+
             <div className="mt-4 space-y-2 max-h-[250px] overflow-y-auto pr-1 custom-scroll">
               {cities.map((city) => (
                 <label key={city} className="flex items-center gap-2 text-sm">
@@ -111,8 +109,6 @@ export default function JobListings() {
             </div>
           </details>
         </div>
-
-        {/* Field Filter */}
         <div className="bg-white rounded-xl border p-4">
           <details>
             <summary className="flex items-center justify-between cursor-pointer font-medium text-sm text-[#1C1B1B]">
@@ -134,7 +130,7 @@ export default function JobListings() {
 
       {/* Main Content */}
       <main className="flex-1">
-        {/* Search Input */}
+        {/* Search & Sort */}
         <div className="relative w-full">
           <Input
             placeholder={t("searchPlaceHolder")}
@@ -147,23 +143,17 @@ export default function JobListings() {
         </div>
 
         {/* Job Cards */}
-        <div className="space-y-2 mt-6">
-          {paginatedJobs.map((job, index) => (
-            <JobCard
-              key={index}
-              logo={job.logo}
-              position={job.position}
-              company={job.company}
-            />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+          {paginatedEmployees.map((employee, idx) => (
+            <EmployeeCard key={idx} {...employee} />
           ))}
         </div>
 
-        {/* Pagination */}
         <div className="flex justify-center items-center gap-2 mt-10">
           <button
             disabled={currentPage === 1}
             onClick={() => setCurrentPage((prev) => prev - 1)}
-            className="px-3 py-1 text-sm rounded-md border border-[#D3D3D3] bg-transparent hover:bg-gray-100 disabled:opacity-50"
+            className="px-3 cursor-pointer py-1 text-sm rounded-md border border-[#D3D3D3] bg-transparent hover:bg-gray-100 disabled:opacity-50"
           >
             <ChevronLeft size={18} />
           </button>
@@ -185,7 +175,7 @@ export default function JobListings() {
           <button
             disabled={currentPage === totalPages}
             onClick={() => setCurrentPage((prev) => prev + 1)}
-            className="px-3 py-1 text-sm rounded-md border border-[#D3D3D3] bg-transparent hover:bg-gray-100 disabled:opacity-50"
+            className="px-3 cursor-pointer py-1 text-sm rounded-md border border-[#D3D3D3] bg-transparent hover:bg-gray-100 disabled:opacity-50"
           >
             <ChevronRight size={18} />
           </button>

@@ -25,8 +25,8 @@ export default function JobCard({
           <Image
             src={logo}
             alt={company}
-            width={30}
-            height={30}
+            width={35}
+            height={35}
             className="object-contain"
           />
         </div>
