@@ -13,17 +13,42 @@
     "recover": "Recover account"
   },
   "Registration": {
-    "title": "Login",
+    "title": "REGISTRATION",
     "email": "Email",
     "password": "Password",
-    "submit": "Login",
-    "orContinueWith": "Or continue with:",
-    "signInWithApple": "Sign in with Apple",
-    "signInWithGoogle": "Sign in with Google",
-    "noAccount": "Don't have an account?",
-    "registerNow": "Register now",
+    "confirm": "Confirm password",
+    "submit": "NEXT",
+    "noAccount": "Already registered?",
+    "registerNow": "Log in",
     "forgotPassword": "Forgot your password?",
-    "recover": "Recover account"
+    "recover": "Recover account",
+    "step2": {
+      "title": "REGISTRATION",
+      "name": "Full Name",
+      "number": "Phone Number",
+      "submit": "NEXT",
+      "back": "Back",
+      "noAccount": "Already registered?",
+      "registerNow": "Log in",
+      "forgotPassword": "Forgot your password?",
+      "recover": "Recover account"
+    },
+    "step3": {
+      "title": "REGISTRATION",
+      "description": "A security code has been sent to your +37412345678 phone number. Please enter it below.",
+      "code": "Security Code",
+      "submit": "NEXT",
+      "back": "Back",
+      "noAccount": "Already registered?",
+      "registerNow": "Log in",
+      "forgotPassword": "Forgot your password?",
+      "recover": "Recover account"
+    },
+    "step4": {
+      "title": "REGISTRATION",
+      "description": "Your registration was successful. You can now log in.",
+      "submit": "LOGIN"
+    }
   },
 
   "HomePage": {

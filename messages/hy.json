@@ -10,18 +10,45 @@
     "noAccount": "Դե՞ռ գրանցված չեք",
     "registerNow": "Գրանցվեք հիմա",
     "forgotPassword": "Մոռացե՞լ եք գաղտաբառը",
-    "recover": "Recover account"
+    "recover": "Վերականգնեք  հաշիվը"
   },
   "Registration": {
-    "title": "REGISTRATION",
-    "email": "Email",
-    "password": "Password",
-    "confirm": "Confirm password",
-    "submit": "NEXT",
-    "noAccount": "Already registered?",
-    "registerNow": "Log in",
-    "forgotPassword": "Forgot your password?",
-    "recover": "Recover account"
+    "title": "ԳՐԱՆՑՈՒՄ",
+    "email": "Էլ. փոստ",
+    "password": "Գաղտնաբառ",
+    "confirm": "Կրկնեք գաղտնաբառը",
+    "submit": "ԱՌԱՋ",
+    "noAccount": "Արդեն գրանցվա՞ծ եք",
+    "registerNow": "Մուտք գործեք",
+    "forgotPassword": "Մոռացե՞լ եք գաղտաբառը",
+    "recover": "Վերականգնեք  հաշիվը",
+    "step2": {
+      "title": "ԳՐԱՆՑՈՒՄ",
+      "name": "Անուն Ազգանուն",
+      "number": "Հեռախոսահամար",
+      "submit": "ԱՌԱՋ",
+      "back": "Վերադառնալ",
+      "noAccount": "Արդեն գրանցվա՞ծ եք",
+      "registerNow": "Մուտք գործեք",
+      "forgotPassword": "Մոռացե՞լ եք գաղտաբառը",
+      "recover": "Վերականգնեք  հաշիվը"
+    },
+    "step3": {
+      "title": "ԳՐԱՆՑՈՒՄ",
+      "description": "Ձեր +37412345678 հեռախոսահամարին ուղարկվել է անվտանգության կոդ, խնդրում ենք նշել այն ",
+      "code": "Անվտանգության կոդ",
+      "submit": "ԱՌԱՋ",
+      "back": "Վերադառնալ",
+      "noAccount": "Արդեն գրանցվա՞ծ եք",
+      "registerNow": "Մուտք գործեք",
+      "forgotPassword": "Մոռացե՞լ եք գաղտաբառը",
+      "recover": "Վերականգնեք  հաշիվը"
+    },
+    "step4": {
+      "title": "ԳՐԱՆՑՈՒՄ",
+      "description": "Ձեր գրանցումը հաջողությամբ կատարվել է այժմ կարող եք մուտք գործել",
+      "submit": "ՄՈՒՏՔ"
+    }
   },
   "HomePage": {
     "home": "Գլխավոր էջ",
