@@ -10,6 +10,7 @@ import Image from "next/image";
 import logo from "../../public/assets/images/worknet-logo.png";
 import { getTranslations } from "next-intl/server";
 import LocaleSwitcher from "../shared/LocaleSwitcher";
+import Link from "next/link";
 
 const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
   const t = useTranslations("HomePage");
@@ -73,13 +74,17 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
                 </a>{" "}
               </div>
             )}
-            <Button variant="secondary" size="small">
-              {t("login")}
-            </Button>
+            <Link href="/sign-in" passHref>
+              <Button variant="secondary" size="small">
+                {t("login")}
+              </Button>
+            </Link>
 
-            <Button variant="primary" size="small">
-              {t("register")}
-            </Button>
+            <Link href="/registration" passHref>
+              <Button variant="primary" size="small">
+                {t("register")}
+              </Button>
+            </Link>
           </>
         ) : (
           <>

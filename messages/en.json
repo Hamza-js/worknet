@@ -1,4 +1,31 @@
 {
+  "Login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Login",
+    "orContinueWith": "Or continue with:",
+    "signInWithApple": "Sign in with Apple",
+    "signInWithGoogle": "Sign in with Google",
+    "noAccount": "Don't have an account?",
+    "registerNow": "Register now",
+    "forgotPassword": "Forgot your password?",
+    "recover": "Recover account"
+  },
+  "Registration": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Login",
+    "orContinueWith": "Or continue with:",
+    "signInWithApple": "Sign in with Apple",
+    "signInWithGoogle": "Sign in with Google",
+    "noAccount": "Don't have an account?",
+    "registerNow": "Register now",
+    "forgotPassword": "Forgot your password?",
+    "recover": "Recover account"
+  },
+
   "HomePage": {
     "home": "Home",
     "jobs": "Jobs",

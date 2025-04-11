@@ -1,4 +1,28 @@
 {
+  "Login": {
+    "title": "Մուտք",
+    "email": "Էլ. փոստ",
+    "password": "Գաղտնաբառ",
+    "submit": "Մուտք",
+    "orContinueWith": "Կամ մուտք գործեք՝",
+    "signInWithApple": "Մուտք Apple-ով",
+    "signInWithGoogle": "Մուտք Google-ով",
+    "noAccount": "Դե՞ռ գրանցված չեք",
+    "registerNow": "Գրանցվեք հիմա",
+    "forgotPassword": "Մոռացե՞լ եք գաղտաբառը",
+    "recover": "Recover account"
+  },
+  "Registration": {
+    "title": "REGISTRATION",
+    "email": "Email",
+    "password": "Password",
+    "confirm": "Confirm password",
+    "submit": "NEXT",
+    "noAccount": "Already registered?",
+    "registerNow": "Log in",
+    "forgotPassword": "Forgot your password?",
+    "recover": "Recover account"
+  },
   "HomePage": {
     "home": "Գլխավոր էջ",
     "jobs": "Աշխատանք",
