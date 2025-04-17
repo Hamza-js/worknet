@@ -22,7 +22,7 @@ const HeroSection = async () => {
 
   return (
     <section className="w-full bg-[#FAFDFF] py-24 text-center">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="-full md:w-[90%] lg:w-[90%] xl:w-[90%] mx-auto px-4">
         <h1 className="text-4xl text-[#1C1B1B] font-extrabold text-[50px] text-center uppercase">
           {t("heroTitle")}
         </h1>

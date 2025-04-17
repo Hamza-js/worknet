@@ -154,5 +154,69 @@
     "field": "Field",
     "count": "Message",
     "save": "Save"
+  },
+  "PackagesPage": {
+    "title": "Choose Your Plan",
+    "description": "Activate the plan that suits you and enjoy all the benefits",
+    "HomePage": "Home Page",
+    "packages": "Business Packages",
+    "monthly": "Monthly Plans",
+    "yearly": "Yearly Plans",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "monthlyPrice": "4,800 AMD / mo",
+        "yearlyPrice": "48,000 AMD / yr",
+        "features": {
+          "0": "1 campaign",
+          "1": "15 SMS or Email",
+          "2": "Push/email notifications",
+          "3": "Facebook, Instagram"
+        },
+        "cta": "Buy Now"
+      },
+      "standard": {
+        "name": "Standard",
+        "monthlyPrice": "14,800 AMD / mo",
+        "yearlyPrice": "148,000 AMD / yr",
+        "features": {
+          "0": "1 campaign",
+          "1": "15 SMS or Email",
+          "2": "Push/email notifications",
+          "3": "Facebook, Instagram",
+          "4": "Extended campaign reach"
+        },
+        "cta": "Buy Now"
+      },
+      "premium": {
+        "name": "Premium",
+        "monthlyPrice": "24,800 AMD / mo",
+        "yearlyPrice": "248,000 AMD / yr",
+        "features": {
+          "0": "1 campaign",
+          "1": "15 SMS or Email",
+          "2": "Push/email notifications",
+          "3": "Facebook, Instagram",
+          "4": "Extended campaign reach",
+          "5": "Advanced analytics"
+        },
+        "cta": "Buy Now"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "monthlyPrice": "48,800 AMD / mo",
+        "yearlyPrice": "488,000 AMD / yr",
+        "features": {
+          "0": "Unlimited campaigns",
+          "1": "50+ SMS or Email",
+          "2": "Push/email notifications",
+          "3": "Facebook, Instagram",
+          "4": "Extended campaign reach",
+          "5": "Advanced analytics",
+          "6": "Dedicated support"
+        },
+        "cta": "Buy Now"
+      }
+    }
   }
 }
