@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { Bookmark } from "lucide-react";
+import { Bookmark, Send } from "lucide-react";
 import Link from "next/link";
-import Bag from "../../public/assets/icons/bag.png";
-import Clock from "../../public/assets/icons/clock.png";
+import Bag from "../../../public/assets/icons/bag.png";
+import Clock from "../../../public/assets/icons/clock.png";
+import { Button } from "../button";
 
 interface JobCardProps {
   logo: string;
@@ -12,16 +13,16 @@ interface JobCardProps {
 }
 
 export default function JobCard({
-  logo,
-  position,
-  company,
+  logo = "https://logo.clearbit.com/google.com",
+  position = "Frontend Developer",
+  company = "Google",
   link = `/jobs/123`,
 }: JobCardProps) {
   return (
-    <div className="bg-white rounded-md  p-5 flex items-center border border-[#EAEAEA] justify-between w-full">
+    <div className="bg-white rounded-md lg:rounded-3xl p-3 md:p-5 lg:p-8 flex items-center border border-[#EAEAEA] justify-between w-full">
       {/* Left: Logo & Info */}
       <div className="flex items-center gap-4">
-        <div className="w-10 h-10 mr-6 rounded-full bg-white border border-[#999BA7] flex items-center justify-center overflow-hidden">
+        <div className="w-10 h-10 md:w-12 md:h-12 mr-6 rounded-full bg-white border border-[#999BA7] flex items-center justify-center overflow-hidden">
           <Image
             src={logo}
             alt={company}
@@ -56,13 +57,13 @@ export default function JobCard({
       {/* Right: Bookmark + Button */}
       <div className="flex items-center gap-2">
         <button className="border border-[#999BA7] rounded-md p-2 hover:bg-gray-100 transition">
-          <Bookmark size={16} color="#1C1B1B" />
+          <Bookmark size={16} color="#999BA7" />
         </button>
-        <Link
-          href={link}
-          className="border border-[#23BA97] text-[#1C1B1B] px-3 py-1.5 rounded-md text-sm hover:bg-gray-100 hover:border-[#999BA7] transition flex items-center gap-1"
-        >
-          Դիտել →
+        <Link href={link}>
+          <Button variant="primary" size="small">
+            <Send fill="white" size={16} className="mr-2" />
+            Դիմել
+          </Button>
         </Link>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import CompanyHeader from "@/components/ui/employersDetails/companyHeader";
 import Header from "@/components/ui/employersDetails/header";
 import Announcements from "@/components/ui/Jobs/announcements ";
+import JobCard from "@/components/ui/Jobs/JobCard";
 import JobContacts from "@/components/ui/Jobs/jobContacts";
 import JobDetailsComponent from "@/components/ui/Jobs/jobDetailsComponent";
 import { getTranslations } from "next-intl/server";
@@ -17,8 +18,20 @@ const JobDetailsPage = async () => {
             <Header />
             <CompanyHeader />
           </div>
-          <div className="mt-4">
+          <div className="mt-4 space-y-4">
             <JobDetailsComponent />
+
+            {[1, 2, 3].map((_, index) => {
+              return (
+                <JobCard
+                  key={index} // It's important to add a unique key for each item
+                  logo="https://logo.clearbit.com/google.com"
+                  position="Frontend Developer"
+                  company="Google"
+                  link={`/jobs/123`}
+                />
+              );
+            })}
           </div>
         </div>
 

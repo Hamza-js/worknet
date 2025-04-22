@@ -218,5 +218,34 @@
         "cta": "Buy Now"
       }
     }
+  },
+  "HelpPage": {
+    "title": "Help",
+    "description": "Activate the package that suits you and take advantage of all the benefits",
+    "HomePage": "Home Page",
+    "help": "Help",
+    "policy": "Privacy Policy",
+    "publicOffer": "Public Offer",
+    "aboutPlatform": "About the Platform",
+    "phoneNumber": "Service Phone Number",
+    "email": "Email",
+    "department": "Business Department",
+    "feedback": "Feedback",
+    "message": "Message",
+    "messagePlaceholder": "Enter text",
+    "file": "Attach a file (optional)",
+    "filePlaceholder": "Choose file",
+    "send": "Send"
+  },
+
+  "policyPage": {
+    "title": "Privacy Policy",
+    "description": "Activate the package that suits you best and enjoy all the benefits",
+    "HomePage": "Home Page",
+    "policyPage": "Privacy Policy",
+    "help": "Help",
+    "policy": "Privacy Policy",
+    "publicOffer": "Public Offer",
+    "aboutPlatform": "About the Platform"
   }
 }
