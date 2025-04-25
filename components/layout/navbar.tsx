@@ -4,9 +4,20 @@ import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
-import { Globe, Bell, MessageCircle, User, Menu, X } from "lucide-react";
+import {
+  Globe,
+  Bell,
+  MessageCircle,
+  User,
+  Menu,
+  X,
+  AlignLeft,
+  UserRound,
+} from "lucide-react";
 import Image from "next/image";
-import logo from "../../public/assets/images/worknet-logo.png";
+import logo from "../../public/assets/images/worknet-logo.svg";
+import logoSmall from "../../public/assets/images/logoSmall.svg";
+
 import LocaleSwitcher from "../shared/LocaleSwitcher";
 import Link from "next/link";
 import clsx from "clsx";
@@ -26,26 +37,63 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="w-full bg-[#FAFDFF] border-b border-[#F1F1F1] px-4 md:px-10 py-4 flex justify-between items-center relative">
-      <div className="flex items-center space-x-4">
+    <nav className="w-full h-[64px] md:h-[96px] bg-[#FFFFFF] border-b border-[#F1F1F1] px-4 md:px-10 py-4 flex justify-between items-center relative">
+      <div className="md:hidden ">
+        <button onClick={toggleMenu}>
+          {menuOpen ? (
+            <X color="#1C1B1B" className="w-8 h-8 cursor-pointer" />
+          ) : (
+            <AlignLeft
+              // size={20}
+              color="#1C1B1B"
+              className="w-8 h-8 cursor-pointer"
+            />
+          )}
+        </button>
+      </div>
+
+      <div className="flex items-center md:space-x-4">
+        {/* Small screen logo */}
         <Link href="/">
-          <Image src={logo} width={100} height={50} alt="logo" />
+          <Image
+            src={logoSmall}
+            width={50}
+            height={50}
+            alt="logo-small"
+            className="block md:hidden"
+          />
         </Link>
+
+        {/* Larger screen logo */}
+        <Link href="/">
+          <Image
+            src={logo}
+            width={161}
+            height={34.13}
+            alt="logo"
+            className="hidden md:block"
+          />
+        </Link>
+
         <span className="hidden md:block ml-6 mr-10">
           <LocaleSwitcher />
         </span>
       </div>
 
-      <div className="md:hidden">
+      <div className="md:hidden cursor-pointer mr-0">
         <button onClick={toggleMenu}>
-          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <UserRound
+            size={16}
+            color="#1C1B1B"
+            className="w-8 h-8 cursor-pointer"
+          />
         </button>
       </div>
 
       <div className="hidden md:flex items-center space-x-4">
         {!isLoggedIn ? (
           <>
-            <div className="flex space-x-8 font-medium text-[14px] text-black leading-[16px] tracking-[0] text-center mr-10">
+            <div className="flex space-x-8 text-[14px] text-black leading-[16px] tracking-[0] text-center mr-24 font-montserrat font-medium text-base  md:tracking-normal">
               {[
                 { path: "/", label: t("home") },
                 { path: "/jobs", label: t("jobs") },
@@ -92,7 +140,11 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
 
       {/* MOBILE MENU */}
       {menuOpen && !isLoggedIn && (
-        <div className="absolute top-full left-0 w-full bg-[#FAFDFF] border-t border-[#F1F1F1] px-6 py-4 flex flex-col space-y-4 z-50 md:hidden">
+        <div className="absolute top-full left-0 w-full  bg-[#FAFDFF] border-t border-[#F1F1F1] px-6 py-4 flex flex-col space-y-4 z-50 md:hidden h-screen">
+          <span className=" ml-6 mr-10">
+            <LocaleSwitcher />
+          </span>
+
           {[
             { path: "/", label: t("home") },
             { path: "/jobs", label: t("jobs") },
@@ -104,7 +156,9 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
               key={path}
               href={path}
               className={clsx(
-                isActive(path) ? "text-[#23BA97] font-semibold" : "text-black"
+                isActive(path)
+                  ? "text-[#23BA97] font-semibold mt-2"
+                  : "text-black mt-2"
               )}
               onClick={() => setMenuOpen(false)}
             >
@@ -112,17 +166,27 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
             </Link>
           ))}
 
-          <Link href="/sign-in" onClick={() => setMenuOpen(false)}>
-            <Button variant="secondary" size="small" className="w-full">
-              {t("login")}
-            </Button>
-          </Link>
+          <div className="flex w-full gap-2 mt-20">
+            <Link
+              className="w-full"
+              href="/sign-in"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Button variant="secondary" size="small" className="w-full">
+                {t("login")}
+              </Button>
+            </Link>
 
-          <Link href="/registration" onClick={() => setMenuOpen(false)}>
-            <Button variant="primary" size="small" className="w-full">
-              {t("register")}
-            </Button>
-          </Link>
+            <Link
+              className="w-full"
+              href="/registration"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Button variant="primary" size="small" className="w-full">
+                {t("register")}
+              </Button>
+            </Link>
+          </div>
         </div>
       )}
     </nav>

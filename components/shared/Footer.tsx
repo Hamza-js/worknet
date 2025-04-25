@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Logo from "../../public/assets/images/worknet-logo.png";
+import Logo from "../../public/assets/images/worknet-logo.svg";
 
 export default async function Footer() {
   const t = await getTranslations("HomePage");

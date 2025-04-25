@@ -50,12 +50,12 @@ export default async function CompanyGrid() {
   const t = await getTranslations("HomePage");
 
   return (
-    <section className="py-22 bg-gray-50 text-center">
+    <section className="py-14 md:py-22 bg-gray-50 text-center">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#1C1B1B] mb-3">
+        <h2 className="font-montserrat font-extrabold text-2xl leading-[100%] tracking-normal text-center uppercase text-[#1C1B1B] mb-3">
           {t("companyGrid.title")}
         </h2>
-        <p className="text-[#1C1B1B] mb-10 text-sm">
+        <p className="text-[#1C1B1B] mb-10 font-montserrat font-light text-sm leading-5 tracking-normal text-center">
           {t("companyGrid.description")}
         </p>
 
