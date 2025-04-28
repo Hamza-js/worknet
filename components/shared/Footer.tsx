@@ -6,25 +6,31 @@ export default async function Footer() {
   const t = await getTranslations("HomePage");
 
   return (
-    <footer className="bg--[FAFAFA] border-t border-[#999BA7]  py-10 px-4 ">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8 text-sm text-[#000000]">
+    <footer className=" bg-[FAFAFA] border-t border-[#999BA7] py-16 px-4 md:h-[320px] md:pt-[40px] md:pr-[80px] md:pb-[40px] md:pl-[80px] flex justify-center ">
+      <div className="flex flex-col md:flex-row gap-8 text-[#000000] w-full max-w-[1900px] justify-center">
         {/* Logo + Description */}
-        <div className="flex flex-col gap-3 max-w-3xl">
+        <div className="flex flex-col gap-3 md:w-[450px]">
           <div className="flex items-center gap-2">
-            <Image src={Logo} alt="Worknet Logo" width={100} height={100} />
+            <Image src={Logo} alt="Worknet Logo" width={160} height={34} />
           </div>
-          <p>{t("footer.about.description")}</p>
-          <p className="text-xs text-gray-500">{t("footer.about.copyright")}</p>
+          <p className="font-montserrat font-normal text-[16px] leading-[25px]">
+            {t("footer.about.description")}
+          </p>
+          <p className="font-montserrat font-normal text-[16px] leading-[16px]">
+            {t("footer.about.copyright")}
+          </p>
         </div>
 
         {/* Section Links */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-3xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-[1000px]">
           {["jobs", "other", "social"].map((sectionKey) => {
             const section = t.raw(`footer.sections.${sectionKey}`);
             return (
               <div key={sectionKey}>
-                <h4 className="font-semibold mb-3">{section.title}</h4>
-                <ul className="space-y-2">
+                <h4 className="font-montserrat font-semibold text-[16px] leading-[16px] mb-3">
+                  {section.title}
+                </h4>
+                <ul className="space-y-2 font-montserrat font-normal text-[16px] leading-[16px]">
                   {section.items.map((item: string, index: number) => (
                     <li key={index}>{item}</li>
                   ))}

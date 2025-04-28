@@ -36,7 +36,7 @@ export default async function JobGrid() {
   const t = await getTranslations("HomePage");
 
   return (
-    <section className="py-14 md:py-22 bg-gray-50 text-center">
+    <section className="py-14 md:py-22 bg-gray-50 text-center ">
       <div className="container mx-auto px-4 max-w-6xl">
         <h2 className=" font-montserrat font-extrabold text-[24px] leading-none text-center uppercase font-montserrat md:font-extrabold md:text-[32px] md:leading-none md:text-center text-[#1C1B1B] mb-3 ">
           {t("jobsGrid.title")}
@@ -45,7 +45,7 @@ export default async function JobGrid() {
           {t("jobsGrid.description")}
         </p>
 
-        <div className="space-y-2 hiddens md:block">
+        <div className="space-y-2 md:hidden">
           {jobs.map((job, index) => (
             <JobCardMobile
               key={index}
@@ -56,7 +56,7 @@ export default async function JobGrid() {
           ))}
         </div>
 
-        <div className="space-y-2 md:hiddens">
+        <div className="space-y-2 hidden md:block">
           {jobs.map((job, index) => (
             <JobCard
               key={index}

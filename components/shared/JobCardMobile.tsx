@@ -34,8 +34,8 @@ export default function JobCardMobile({
           <h3 className="font-montserrat font-semibold text-[16px] leading-none text-[#1C1B1B]">
             {position}
           </h3>
-          <div className="flex flex-col gap-[5px] items-center justify-center mt-1">
-            <div>
+          <div className="flex flex-col gap-[5px] items-center justify-center mt-2">
+            <div className="flex gap-3 items-center justify-center">
               <Image
                 src={Bag}
                 alt={company}
@@ -47,13 +47,13 @@ export default function JobCardMobile({
                 {company}
               </p>
             </div>
-            <div className="flex gap-1 items-center justify-center">
+            <div className="flex gap-3 items-center justify-center">
               <Image
                 src={Clock}
                 alt={company}
                 width={14}
                 height={14}
-                className="object-contain ml-3"
+                className="object-contain"
               />
               <p className=" text-[#1C1B1B] font-montserrat font-normal text-[14px] leading-[16px]">
                 {company}
@@ -64,13 +64,13 @@ export default function JobCardMobile({
       </div>
 
       {/* Right: Bookmark + Button */}
-      <div className="flex items-center gap-2">
-        <button className="border border-[#999BA7] rounded-md p-2 hover:bg-gray-100 transition">
-          <Bookmark size={16} color="#1C1B1B" />
+      <div className="flex items-center gap-2 w-full">
+        <button className="border border-[#999BA7] rounded-[16px]  pt-[12px] pb-[12px] gap-[10px] hover:bg-gray-100 transition w-[48px] h-[48px] flex items-center justify-center">
+          <Bookmark size={20} color="#999BA7" />
         </button>
         <Link
           href={link}
-          className="border border-[#23BA97] text-[#1C1B1B] px-3 py-1.5 rounded-md text-sm hover:bg-gray-100 hover:border-[#999BA7] transition flex items-center gap-1"
+          className="border w-full border-[#23BA97] text-[#1C1B1B] px-3 py-1.5 text-sm hover:bg-gray-100 hover:border-[#999BA7] transition flex items-center justify-center h-[48px] rounded-[16px] pt-[12px] pr-[24px] pb-[12px] pl-[24px] gap-[10px]"
         >
           Դիտել →
         </Link>

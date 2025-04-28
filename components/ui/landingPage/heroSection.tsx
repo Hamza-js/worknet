@@ -60,7 +60,7 @@ const HeroSection = async () => {
             </label>
             <Input
               placeholder={t("heroSearchPlaceholder")}
-              className=" w-full md:w-[334px] h-[56px] gap-2 border border-[#1C1B1B] rounded-[16px] pt-4 pr-6 pb-4 pl-6"
+              className=" w-full md:w-[334px] h-[56px] gap-2 border border-[#1C1B1B] rounded-[16px] pt-4 pr-6 pb-4 pl-3"
             />
             <Search
               color="#1C1B1B"

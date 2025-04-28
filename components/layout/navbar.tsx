@@ -41,12 +41,12 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
       <div className="md:hidden ">
         <button onClick={toggleMenu}>
           {menuOpen ? (
-            <X color="#1C1B1B" className="w-8 h-8 cursor-pointer" />
+            <X color="#1C1B1B" className="w-[21px] h-[16px] cursor-pointer" />
           ) : (
             <AlignLeft
               // size={20}
               color="#1C1B1B"
-              className="w-8 h-8 cursor-pointer"
+              className="w-[21px] h-[16px] cursor-pointer"
             />
           )}
         </button>
@@ -57,8 +57,8 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
         <Link href="/">
           <Image
             src={logoSmall}
-            width={50}
-            height={50}
+            width={52}
+            height={24}
             alt="logo-small"
             className="block md:hidden"
           />
@@ -83,9 +83,9 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
       <div className="md:hidden cursor-pointer mr-0">
         <button onClick={toggleMenu}>
           <UserRound
-            size={16}
+            // size={16}
             color="#1C1B1B"
-            className="w-8 h-8 cursor-pointer"
+            className="w-[23px] h-[20px] cursor-pointer"
           />
         </button>
       </div>
@@ -140,7 +140,7 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
 
       {/* MOBILE MENU */}
       {menuOpen && !isLoggedIn && (
-        <div className="absolute top-full left-0 w-full  bg-[#FAFDFF] border-t border-[#F1F1F1] px-6 py-4 flex flex-col space-y-4 z-50 md:hidden h-screen">
+        <div className="absolute top-full left-0 w-full  bg-[#FFFF] border-t border-[#F1F1F1] px-6 py-4 flex flex-col space-y-4 z-50 md:hidden h-screen">
           <span className=" ml-6 mr-10">
             <LocaleSwitcher />
           </span>
@@ -157,8 +157,8 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
               href={path}
               className={clsx(
                 isActive(path)
-                  ? "text-[#23BA97] font-semibold mt-2"
-                  : "text-black mt-2"
+                  ? "text-[#23BA97] text-[16px] font-[500] mt-2"
+                  : "text-black mt-2 text-[16px] font-[500]"
               )}
               onClick={() => setMenuOpen(false)}
             >

@@ -54,7 +54,7 @@ export default async function CompanyGrid() {
   return (
     <section className="py-14 md:py-22 bg-gray-50 text-center">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className=" font-montserrat font-extrabold text-[24px] leading-none text-center uppercase font-montserrat md:font-extrabold md:text-[32px] md:leading-none md:text-center text-[#1C1B1B] mb-3 ">
+        <h2 className=" font-montserrat font-extrabold text-[24px] leading-none text-center uppercase font-montserrat  md:text-[32px] md:leading-none md:text-center text-[#1C1B1B] mb-3 ">
           {t("companyGrid.title")}
         </h2>
         <p className="text-[#1C1B1B] mb-10 font-montserrat font-light text-sm leading-5 tracking-normal text-center font-montserrat md:font-light text-[16px] md:leading-[16px]">

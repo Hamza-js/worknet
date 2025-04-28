@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Bookmark } from "lucide-react";
+import { ArrowRight, Bookmark } from "lucide-react";
 import Link from "next/link";
 import Bag from "../../public/assets/icons/bag.svg";
 import Clock from "../../public/assets/icons/clock.svg";
@@ -18,51 +18,57 @@ export default function JobCard({
   link = `/jobs/123`,
 }: JobCardProps) {
   return (
-    <div className="bg-white rounded-md  p-5 flex items-center border border-[#EAEAEA] justify-between w-full">
+    <div className="bg-white rounded-md  p-5 flex items-center border border-[#EAEAEA] justify-between w-full          md:h-[188px] md:rounded-[30px]  md:pt-[32px] md:pr-[48px] md:pb-[32px] md:pl-[48px] gap-[64px]">
       {/* Left: Logo & Info */}
       <div className="flex items-center gap-4">
-        <div className="w-10 h-10 mr-6 rounded-full bg-white border border-[#999BA7] flex items-center justify-center overflow-hidden">
+        <div className="w-[80px] h-[80px] rounded-[220px] mr-6 bg-white border border-[#999BA7] flex items-center justify-center overflow-hidden">
           <Image
             src={logo}
             alt={company}
-            width={35}
-            height={35}
+            width={80}
+            height={80}
             className="object-contain"
           />
         </div>
-        <div className=" flex  flex-col  items-start ">
-          <h3 className="text-md font-bold text-[#1C1B1B]">{position}</h3>
-          <div className="flex row gap-2 items-center justify-center mt-1">
+        <div className="flex  flex-col items-start ">
+          <h3 className="font-montserrat font-semibold text-[32px] leading-none text-[#1C1B1B]">
+            {position}
+          </h3>
+          <div className="flex row gap-2 items-center justify-center mt-4">
             <Image
               src={Bag}
               alt={company}
-              width={14}
-              height={14}
+              width={20}
+              height={20}
               className="object-contain"
             />
-            <p className="text-[13px] text-[#1C1B1B] leading-none">{company}</p>
+            <p className="font-montserrat font-normal text-[16px] leading-[16px] text-[#1C1B1B]">
+              {company}
+            </p>
             <Image
               src={Clock}
               alt={company}
-              width={14}
-              height={14}
+              width={21}
+              height={21}
               className="object-contain ml-3"
             />
-            <p className="text-[13px] text-[#1C1B1B] leading-none">{company}</p>
+            <p className="font-montserrat font-normal text-[16px] leading-[16px] text-[#1C1B1B]">
+              {company}
+            </p>
           </div>
         </div>
       </div>
 
       {/* Right: Bookmark + Button */}
       <div className="flex items-center gap-2">
-        <button className="border border-[#999BA7] rounded-md p-2 hover:bg-gray-100 transition">
-          <Bookmark size={16} color="#1C1B1B" />
+        <button className="border border-[#999BA7] w-[56px] h-[56px] rounded-[16px]  flex items-center justify-center gap-[10px] hover:bg-gray-100 transition">
+          <Bookmark size={20} color="#999BA7" />
         </button>
         <Link
           href={link}
-          className="border border-[#23BA97] text-[#1C1B1B] px-3 py-1.5 rounded-md text-sm hover:bg-gray-100 hover:border-[#999BA7] transition flex items-center gap-1"
+          className="border border-[#23BA97] text-[#1C1B1B] px-3 py-1.5 text-sm hover:bg-gray-100 hover:border-[#999BA7] transition flex items-center w-[138px] h-[56px] rounded-[16px] pt-[19px] pr-[24px] pb-[19px] pl-[24px] gap-[10px]"
         >
-          Դիտել →
+          Դիտել <ArrowRight color="#1C1B1B" size={18} />
         </Link>
       </div>
     </div>

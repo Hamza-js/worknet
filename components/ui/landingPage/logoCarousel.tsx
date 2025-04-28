@@ -33,6 +33,8 @@ export default function LogoCarousel() {
       <div className="flex w-max gap-18 scroll">
         {[...logos, ...logos, ...logos].map((logo, idx) => (
           <Image
+            // width={154}
+            // height={52}
             key={idx}
             src={logo}
             alt={`logo-${idx}`}
