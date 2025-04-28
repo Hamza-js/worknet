@@ -7,22 +7,24 @@ const companies = [
   {
     logo: "https://logo.clearbit.com/google.com",
     name: "Google",
-    industry: "Information Technology",
+    industry: "Information Technology Enterprise Software",
   },
   {
     logo: "https://logo.clearbit.com/apple.com",
     name: "Apple",
-    industry: "Consumer Electronics",
+    industry: "Consumer Electronics Enterprise Software",
   },
   {
     logo: "https://logo.clearbit.com/microsoft.com",
     name: "Microsoft",
-    industry: "Enterprise Software",
+    industry:
+      "Enterprise Software Enterprise Software Enterprise Software Enterprise Software Enterprise Software Enterprise Software",
   },
   {
     logo: "https://logo.clearbit.com/amazon.com",
     name: "Amazon",
-    industry: "E-commerce",
+    industry:
+      "E-commerce Enterprise Software Enterprise Software Enterprise Software",
   },
   {
     logo: "https://logo.clearbit.com/netflix.com",
@@ -52,14 +54,14 @@ export default async function CompanyGrid() {
   return (
     <section className="py-14 md:py-22 bg-gray-50 text-center">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="font-montserrat font-extrabold text-2xl leading-[100%] tracking-normal text-center uppercase text-[#1C1B1B] mb-3">
+        <h2 className="font-montserrat font-extrabold text-2xl leading-[100%] tracking-normal text-center uppercase text-[#1C1B1B] mb-3 font-montserrat md:font-extrabold text-[32px] md:leading-none">
           {t("companyGrid.title")}
         </h2>
-        <p className="text-[#1C1B1B] mb-10 font-montserrat font-light text-sm leading-5 tracking-normal text-center">
+        <p className="text-[#1C1B1B] mb-10 font-montserrat font-light text-sm leading-5 tracking-normal text-center font-montserrat md:font-light text-[16px] md:leading-[16px]">
           {t("companyGrid.description")}
         </p>
 
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 justify-center">
           {companies.map((company, idx) => (
             <CompanyCard key={idx} {...company} />
           ))}
