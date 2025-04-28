@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Bookmark, Send } from "lucide-react";
 import Link from "next/link";
-import Bag from "../../../public/assets/icons/bag.png";
-import Clock from "../../../public/assets/icons/clock.png";
+import Bag from "../../../public/assets/icons/bag.svg";
+import Clock from "../../../public/assets/icons/clock.svg";
 import { Button } from "../button";
 
 interface JobCardProps {
