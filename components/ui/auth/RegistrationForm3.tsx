@@ -55,20 +55,29 @@ export default function RegistrationForm3({ onNext, onBack }: Props) {
   };
 
   return (
-    <div className="w-full bg-gray-50 px-4 pt-20 min-h-screen">
-      <Card className=" mx-auto w-full max-w-md rounded-xl p-6 py-8 border border-[#999BA7]">
-        <div className="flex flex-col items-center space-y-2 text-center">
-          <Image src={LogoIcon} alt="Logo" height={48} width={70} />
-          <p className="text-lg font-semibold capitalize">{t("step3.title")}</p>
-          <p className="text-sm max-w-xs">{t("step3.description")}</p>
+    <div className="flex items-center justify-center mt-[-30px] md:mt-[-10px]  px-4 w-full bg-gray-50  min-h-screen">
+      <Card className=" mx-auto w-full md:max-w-[574px] rounded-[40px] md:p-6 py-8 border border-[#999BA7]">
+        <div className="flex flex-col items-center space-y-4">
+          <Image src={LogoIcon} alt="Logo" height={48} width={105} />
+          <p className="font-montserrat font-bold text-[24px] leading-[16px] uppercase">
+            {t("step3.title")}
+          </p>
+          <p className="font-montserrat font-normal text-[16px] leading-[24px] text-center">
+            {t("step3.description")}
+          </p>
         </div>
 
-        <CardContent className="pt-3 space-y-4">
+        <CardContent className="pt-3 space-y-4 p-4">
           <div className="space-y-2">
-            <Label htmlFor="otp">{t("step3.code")}</Label>
+            <Label
+              className="font-montserrat font-semibold text-[16px] leading-[16px] text-black"
+              htmlFor="otp"
+            >
+              {t("step3.code")}
+            </Label>
             <div
               onPaste={handlePaste}
-              className="flex justify-between rounded-xl border border-[#1C1B1B] px-4 py-3 bg-white"
+              className="flex justify-between h-[56px] rounded-[16px] border border-[#1C1B1B] px-4 py-3 bg-white"
             >
               {otp.map((digit, index) => (
                 <input
@@ -93,7 +102,7 @@ export default function RegistrationForm3({ onNext, onBack }: Props) {
             onClick={onNext}
             variant="primary"
             size="large"
-            className="w-full"
+            className="w-full h-[50px] rounded-[16px] pt-[16px] pr-[64px] pb-[16px] pl-[64px] gap-[10px]"
           >
             {t("step3.submit")}
           </Button>
@@ -101,7 +110,7 @@ export default function RegistrationForm3({ onNext, onBack }: Props) {
             onClick={onBack}
             variant="secondary"
             size="large"
-            className="w-full"
+            className="w-full font-montserrat font-medium text-[16px] leading-[16px] text-center"
           >
             <ChevronLeft size={18} color="black" className="mr-2" />
             {t("step3.back")}
@@ -109,18 +118,20 @@ export default function RegistrationForm3({ onNext, onBack }: Props) {
 
           <div className="mt-4 text-center text-xs text-[#293B44]">
             <div className="space-x-[2px] flex items-center justify-center w-full">
-              <p className="mb-2">{t("step3.noAccount")}</p>
+              <p className="mb-2 font-montserrat font-normal text-[16px] leading-[16px] text-center">
+                {t("noAccount")}
+              </p>
               <Link
                 href="/sign-in"
-                className="mb-2 text-[#23BA97] hover:underline"
+                className="mb-2 text-[#23BA97] hover:underline font-montserrat font-normal text-[16px] leading-[16px] text-center"
               >
-                {t("step3.registerNow")}
+                {t("registerNow")}
               </Link>
             </div>
-            <div className="space-x-[2px] flex items-center justify-center w-full">
-              <p className="">{t("step3.forgotPassword")} </p>
+            <div className="space-x-[2px] flex items-center justify-center w-full font-montserrat font-normal text-[16px] leading-[16px] text-center">
+              <p className="">{t("forgotPassword")} </p>
               <Link href="/privacy" className=" text-[#23BA97] hover:underline">
-                {t("step3.recover")}
+                {t("recover")}
               </Link>
             </div>
           </div>

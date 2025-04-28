@@ -41,12 +41,12 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
       <div className="md:hidden ">
         <button onClick={toggleMenu}>
           {menuOpen ? (
-            <X color="#1C1B1B" className="w-[21px] h-[16px] cursor-pointer" />
+            <X color="#1C1B1B" className="w-[25px] h-[25px] cursor-pointer" />
           ) : (
             <AlignLeft
               // size={20}
               color="#1C1B1B"
-              className="w-[21px] h-[16px] cursor-pointer"
+              className="w-[25px] h-[25px] cursor-pointer"
             />
           )}
         </button>

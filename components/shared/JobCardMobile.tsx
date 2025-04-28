@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Bookmark } from "lucide-react";
+import { ArrowRight, Bookmark } from "lucide-react";
 import Link from "next/link";
 import Bag from "../../public/assets/icons/bag.svg";
 import Clock from "../../public/assets/icons/clock.svg";
@@ -72,7 +72,7 @@ export default function JobCardMobile({
           href={link}
           className="border w-full border-[#23BA97] text-[#1C1B1B] px-3 py-1.5 text-sm hover:bg-gray-100 hover:border-[#999BA7] transition flex items-center justify-center h-[48px] rounded-[16px] pt-[12px] pr-[24px] pb-[12px] pl-[24px] gap-[10px]"
         >
-          Դիտել →
+          Դիտել <ArrowRight color="#1C1B1B" size={18} />
         </Link>
       </div>
     </div>
