@@ -18,9 +18,9 @@ export default function JobCardMobile({
   link = `/jobs/123`,
 }: JobCardProps) {
   return (
-    <div className="bg-white h-[177px] top-[2061px] left-4 rounded-[30px] gap-[24px] p-4 flex items-center border border-[#EAEAEA] justify-between w-full flex-col">
+    <div className="bg-white h-[177px] rounded-[30px] gap-[24px] p-4 flex items-center border border-[#EAEAEA] justify-between w-full flex-col">
       {/* Left: Logo & Info */}
-      <div className="flex items-center  w-full  h-[73px] min-w-[320px] gap-[16px]">
+      <div className="flex items-center w-full h-[73px] gap-[16px]">
         <div className="w-[48px] h-[48px] rounded-[220px]  bg-white border border-[#999BA7] flex items-center justify-center overflow-hidden">
           <Image
             src={logo}
@@ -30,7 +30,7 @@ export default function JobCardMobile({
             className="object-contain"
           />
         </div>
-        <div className=" flex  flex-col  items-start">
+        <div className=" flex flex-col items-start ">
           <h3 className="font-montserrat font-semibold text-[16px] leading-none text-[#1C1B1B]">
             {position}
           </h3>
@@ -64,8 +64,8 @@ export default function JobCardMobile({
       </div>
 
       {/* Right: Bookmark + Button */}
-      <div className="flex items-center gap-2 w-full">
-        <button className="border border-[#999BA7] rounded-[16px]  pt-[12px] pb-[12px] gap-[10px] hover:bg-gray-100 transition w-[48px] h-[48px] flex items-center justify-center">
+      <div className="flex items-center gap-[16px] w-full">
+        <button className="border border-[#999BA7] rounded-[16px]  pt-[12px] pb-[12px] gap-[10px] hover:bg-gray-100 transition w-full max-w-[48px] flex items-center justify-center">
           <Bookmark size={20} color="#999BA7" />
         </button>
         <Link
