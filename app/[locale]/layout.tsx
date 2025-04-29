@@ -34,7 +34,7 @@ export default async function LocaleLayout({
           <div className="fixed top-0 left-0 w-full z-50">
             <Navbar isLoggedIn={false} />
           </div>
-          <div className="pt-20"> {children}</div>
+          <div className="pt-[64px] md:pt-[96px]"> {children}</div>
           <Footer />
         </NextIntlClientProvider>
       </body>

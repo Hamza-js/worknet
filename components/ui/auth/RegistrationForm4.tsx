@@ -12,8 +12,8 @@ export default function RegistrationForm4() {
   const t = useTranslations("Registration");
 
   return (
-    <div className="flex items-center justify-center mt-[-30px] md:mt-[-10px]  px-4 w-full bg-gray-50  min-h-screen">
-      <Card className=" mx-auto w-full md:max-w-[574px] rounded-[40px] md:p-6 py-8 border border-[#999BA7]">
+    <div className="flex pt-10 md:pt-16 pb-10 px-4 w-full bg-gray-50 min-h-screen justify-center items-start">
+      <Card className="mx-auto w-full md:max-w-[574px] rounded-[40px] md:p-6 py-8 border border-[#999BA7]">
         <div className="flex flex-col items-center space-y-4">
           <Image src={LogoIcon} alt="Logo" height={48} width={105} />
           <p className="font-montserrat font-bold text-[24px] leading-[16px] uppercase">

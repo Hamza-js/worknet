@@ -55,7 +55,7 @@ export default function RegistrationForm3({ onNext, onBack }: Props) {
   };
 
   return (
-    <div className="flex items-center justify-center mt-[-30px] md:mt-[-10px]  px-4 w-full bg-gray-50  min-h-screen">
+    <div className="flex pt-10 md:pt-16 pb-10 px-4 w-full bg-gray-50 min-h-screen justify-center items-start">
       <Card className=" mx-auto w-full md:max-w-[574px] rounded-[40px] md:p-6 py-8 border border-[#999BA7]">
         <div className="flex flex-col items-center space-y-4">
           <Image src={LogoIcon} alt="Logo" height={48} width={105} />
@@ -120,19 +120,24 @@ export default function RegistrationForm3({ onNext, onBack }: Props) {
             <div className="space-x-[2px] flex items-center justify-center w-full">
               <p className="mb-2 font-montserrat font-normal text-[16px] leading-[16px] text-center">
                 {t("noAccount")}
+                <Link
+                  href="/sign-in"
+                  className="mb-2 text-[#23BA97] ml-1 hover:underline font-montserrat font-normal text-[16px] leading-[16px] text-center"
+                >
+                  {t("registerNow")}
+                </Link>
               </p>
-              <Link
-                href="/sign-in"
-                className="mb-2 text-[#23BA97] hover:underline font-montserrat font-normal text-[16px] leading-[16px] text-center"
-              >
-                {t("registerNow")}
-              </Link>
             </div>
             <div className="space-x-[2px] flex items-center justify-center w-full font-montserrat font-normal text-[16px] leading-[16px] text-center">
-              <p className="">{t("forgotPassword")} </p>
-              <Link href="/privacy" className=" text-[#23BA97] hover:underline">
-                {t("recover")}
-              </Link>
+              <p className="">
+                {t("forgotPassword")}{" "}
+                <Link
+                  href="/privacy"
+                  className=" text-[#23BA97] hover:underline"
+                >
+                  {t("recover")}
+                </Link>
+              </p>
             </div>
           </div>
         </CardContent>
