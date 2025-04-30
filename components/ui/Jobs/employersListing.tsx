@@ -65,7 +65,7 @@ const employers = Array.from({ length: 50 }, (_, i) => {
 });
 
 export default function EmployersListing() {
-  const t = useTranslations("JobsPage");
+  const t = useTranslations("EmployersPage");
   const pageSize = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(employers.length / pageSize);
@@ -90,23 +90,23 @@ export default function EmployersListing() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 py-20 ">
+    <div className="flex flex-col md:flex-row gap-6 py-10 md:py-20 w-full">
       {/* Sidebar Filters */}
-      <aside className="w-full md:w-1/4  space-y-2">
-        <h2 className="text-md font-semibold bg-white rounded-md p-[11px] border border-[#EAEAEA]">
+      <aside className="hidden md:block w-full md:w-1/4 space-y-2">
+        <h2 className=" text-md font-semibold bg-white rounded-md p-[11px] border border-[#EAEAEA]">
           {t("Filter")}
         </h2>
 
         {/* Fields */}
         <div className="bg-white rounded-md border p-4">
           <details open>
-            <summary className="flex items-center justify-between cursor-pointer font-medium text-sm text-[#1C1B1B]">
+            <div className="flex items-center justify-between cursor-pointer font-medium text-sm text-[#1C1B1B]">
               <span className="flex items-center gap-2">
                 <SlidersHorizontal className="w-4 h-4 text-gray-500" />
                 {t("field")}
               </span>
               <ChevronDown className="w-4 h-4 text-gray-500" />
-            </summary>
+            </div>
 
             <div className="mt-4 space-y-2 max-h-[250px] overflow-y-auto pr-1 custom-scroll">
               {fields.map((field) => (
@@ -126,16 +126,16 @@ export default function EmployersListing() {
         <div className="relative w-full">
           <Input
             placeholder={t("searchPlaceHolder")}
-            className="w-full rounded-md pl-5 pr-[100px] h-12 bg-white border border-[#EAEAEA] text-sm"
+            className="w-full rounded-[16px] pl-5 pr-[100px] h-[72px] bg-white border border-[#EAEAEA] text-[16px]"
           />
           <button className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1 text-sm font-medium text-[#1C1B1B] px-4 py-1.5 rounded-full bg-transparent hover:bg-gray-100 transition">
-            <Search className="w-4 h-4" color="#1C1B1B" />
+            <Search className="w-6 h-6" color="#1C1B1B" />
             {t("serach")}
           </button>
         </div>
 
         {/* Job Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[18px] mt-4">
           {paginatedEmployers.map((employer, idx) => (
             <CompanyCard key={idx} {...employer} />
           ))}

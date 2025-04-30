@@ -90,31 +90,29 @@ const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
         </button>
       </div>
 
+      <div className="hidden md:flex space-x-[24px] text-[14px] text-black leading-[16px] tracking-[0] text-center mr-24 font-montserrat font-medium text-base md:tracking-normal">
+        {[
+          { path: "/", label: t("home") },
+          { path: "/jobs", label: t("jobs") },
+          { path: "/employees", label: t("searchEmployees") },
+          { path: "/employers", label: t("employers") },
+          { path: "/packages", label: t("packages") },
+        ].map(({ path, label }) => (
+          <Link
+            key={path}
+            href={path}
+            className={clsx(
+              isActive(path) ? "text-[#23BA97] font-semibold" : "text-black"
+            )}
+          >
+            {label}
+          </Link>
+        ))}
+      </div>
+
       <div className="hidden md:flex items-center space-x-4">
         {!isLoggedIn ? (
           <>
-            <div className="flex space-x-8 text-[14px] text-black leading-[16px] tracking-[0] text-center mr-24 font-montserrat font-medium text-base  md:tracking-normal">
-              {[
-                { path: "/", label: t("home") },
-                { path: "/jobs", label: t("jobs") },
-                { path: "/employees", label: t("searchEmployees") },
-                { path: "/employers", label: t("employers") },
-                { path: "/packages", label: t("packages") },
-              ].map(({ path, label }) => (
-                <Link
-                  key={path}
-                  href={path}
-                  className={clsx(
-                    isActive(path)
-                      ? "text-[#23BA97] font-semibold"
-                      : "text-black"
-                  )}
-                >
-                  {label}
-                </Link>
-              ))}
-            </div>
-
             <Link href="/sign-in">
               <Button variant="secondary" size="small">
                 {t("login")}
