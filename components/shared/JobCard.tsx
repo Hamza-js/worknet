@@ -3,6 +3,7 @@ import { ArrowRight, Bookmark } from "lucide-react";
 import Link from "next/link";
 import Bag from "../../public/assets/icons/bag.svg";
 import Clock from "../../public/assets/icons/clock.svg";
+import { Hint } from "./hint";
 
 interface JobCardProps {
   logo: string;
@@ -35,24 +36,28 @@ export default function JobCard({
             {position}
           </h3>
           <div className="flex row gap-2 items-center justify-center mt-4">
-            <Image
-              src={Bag}
-              alt={company}
-              width={20}
-              height={20}
-              className="object-contain"
-            />
-            <p className="font-montserrat font-normal text-[16px] leading-[16px] text-[#1C1B1B]">
+            <Hint label="Company" side="top">
+              <Image
+                src={Bag}
+                alt={company}
+                width={20}
+                height={20}
+                className="object-contain"
+              />
+            </Hint>
+            <p className="font-montserrat mt-1 font-normal text-[16px] leading-[16px] text-[#1C1B1B]">
               {company}
             </p>
-            <Image
-              src={Clock}
-              alt={company}
-              width={21}
-              height={21}
-              className="object-contain ml-3"
-            />
-            <p className="font-montserrat font-normal text-[16px] leading-[16px] text-[#1C1B1B]">
+            <Hint label="Tooltip" side="top">
+              <Image
+                src={Clock}
+                alt={company}
+                width={21}
+                height={21}
+                className="object-contain ml-3"
+              />
+            </Hint>
+            <p className="font-montserrat mt-1 font-normal text-[16px] leading-[16px] text-[#1C1B1B]">
               {company}
             </p>
           </div>
@@ -61,9 +66,11 @@ export default function JobCard({
 
       {/* Right: Bookmark + Button */}
       <div className="flex items-center gap-2">
-        <button className="border border-[#999BA7] w-[56px] h-[56px] rounded-[16px]  flex items-center justify-center gap-[10px] hover:bg-gray-100 transition">
-          <Bookmark size={20} color="#999BA7" />
-        </button>
+        <Hint label="Tooltip" side="top">
+          <button className="border cursor-pointer border-[#999BA7] w-[56px] h-[56px] rounded-[16px]  flex items-center justify-center gap-[10px] hover:bg-gray-100 transition">
+            <Bookmark size={20} color="#999BA7" />
+          </button>
+        </Hint>
         <Link
           href={link}
           className="border border-[#23BA97] text-[#1C1B1B] px-3 py-1.5 text-sm hover:bg-gray-100 hover:border-[#999BA7] transition flex items-center w-[138px] h-[56px] rounded-[16px] pt-[19px] pr-[24px] pb-[19px] pl-[24px] gap-[10px]"
