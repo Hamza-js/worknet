@@ -3,7 +3,7 @@
 import { BookmarkMinus, ChevronLeft } from "lucide-react";
 import bgImage from "../../../public/assets/images/digitain.png";
 import { useRouter } from "next/navigation";
-import { useTooltip } from "@/components/hooks/useTooltip"; // Import the useTooltip hook
+import { Hint } from "@/components/shared/hint";
 
 export default function Header() {
   const router = useRouter();
@@ -11,11 +11,6 @@ export default function Header() {
   const handleGoBack = () => {
     router.back();
   };
-
-  const backTooltip = useTooltip({
-    content: "Go Back",
-    children: <ChevronLeft size={18} className="cursor-pointer" />,
-  });
 
   return (
     <header className="bg-white py-3 relative h-36 rounded-2xl overflow-hidden">
@@ -26,12 +21,14 @@ export default function Header() {
 
       <div className="flex justify-between items-center px-3 relative z-10">
         {/* Back Button with Tooltip */}
-        <span
-          onClick={handleGoBack}
-          className="bg-white p-2 cursor-pointer text-sm rounded-md"
-        >
-          {backTooltip} {/* Render Tooltip here with "Go Back" text */}
-        </span>
+        <Hint label="Back" side="top">
+          <span
+            onClick={handleGoBack}
+            className="bg-white p-2 cursor-pointer text-sm rounded-md"
+          >
+            <ChevronLeft size={18} className="cursor-pointer" />
+          </span>
+        </Hint>
 
         {/* Save Button */}
         <span className="bg-white flex space-x-1 items-center p-2 cursor-pointer text-sm rounded-md">
