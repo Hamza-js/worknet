@@ -208,7 +208,7 @@ export default function EmployersListing() {
               </button>
             ))}
 
-            <span className="px-2 cursor-pointer text-sm text-gray-500">
+            <span className="px-2 text-sm text-gray-500">
               <Ellipsis />
             </span>
 

@@ -8,8 +8,8 @@ const Employers = async () => {
 
   return (
     <section className="py-10 md:py-22 bg-gray-50 text-center">
-      <div className="container mx-auto px-4 max-w-[1664]">
-        <h2 className=" font-montserrat font-extrabold text-2xl leading-none tracking-normal text-center uppercase  text-[#1C1B1B] mb-3">
+      <div className="container  mx-auto px-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#1C1B1B] mb-3">
           {t("title")}
         </h2>
         <p className="text-[#1C1B1B] mb-3 font-montserrat md:text-base md:leading-4 tracking-normal font-montserrat font-light text-xs leading-5 text-center">
