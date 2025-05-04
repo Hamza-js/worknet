@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Bookmark, FileText } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Hint } from "./hint";
 
 interface CompanyCardProps {
   logo: string;
@@ -18,7 +19,7 @@ export default function CompanyCard({
   const t = useTranslations("HomePage");
 
   return (
-    <div className="relative bg-white h-[352px] max-w-[361px] border-[#EAEAEA] rounded-[30px] pt-18 pr-8 pl-8 pb-2 text-center">
+    <div className="relative bg-white h-[352px] max-w-[361px] border border-[#EAEAEA] rounded-[30px] pt-18 pr-8 pl-8 pb-2 text-center">
       {/* Top-right teal dot */}
       {/* <div className="absolute top-4 md:top-9 right-4 md:right-8 w-6 h-6 rounded-full gap-2 p-1 flex items-center justify-center bg-[#FAFAFA]">
         <div className="w-[10px] h-[10px]  rounded-full bg-[#02B1AF]"></div>
@@ -64,7 +65,9 @@ export default function CompanyCard({
       {/* Bottom row */}
       <div className="absolute bottom-5 left-0 right-0 flex items-center justify-center text-[#999BA7] h-[64px] pt-[17px] pr-[10px] pb-[17px] pl-[10px] gap-[60px] md:gap-[30px]">
         <div className="flex items-center flex-1 justify-center gap-1 font-inter font-normal text-base leading-none tracking-normal">
-          <FileText size={24} />
+          <Hint label="Jobs" side="top">
+            <FileText size={24} />
+          </Hint>
           <span className="mt-1 ml-1 font-montserrat font-normal text-base leading-none tracking-normal">
             {jobsCount}
           </span>
