@@ -66,19 +66,19 @@ export default function CompanyCard({
       </div>
 
       {/* Bottom row */}
-      <div className="absolute bottom-5 left-0 right-0 flex items-center justify-center text-[#999BA7] h-[64px] pt-[17px] pr-[10px] pb-[17px] pl-[10px] gap-[60px] md:gap-[30px]">
+      <div className="absolute bottom-5 left-0 right-0 flex items-center justify-between text-[#999BA7] h-[64px] pt-[17px] pr-[10px] pb-[17px] pl-[10px] gap-[60px] md:gap-[30px]">
         <div className="flex items-center flex-1 justify-center gap-1 font-inter font-normal text-base leading-none tracking-normal">
           <Hint label="Jobs" side="top">
             <FileText className="cursor-pointer" size={24} />
           </Hint>
-          <span className="mt-1 ml-1 font-montserrat font-normal text-base leading-none tracking-normal">
+          <span className="pt-1 ml-1 font-montserrat font-normal text-base leading-none tracking-normal">
             {jobsCount}
           </span>
         </div>
         <span className="bg-[#999BA7] w-[1px] h-6"></span>
-        <div className="flex flex-1 items-center gap-1 text-[#00C896] font-medium">
+        <div className="flex flex-1 items-center justify-center text-center gap-1 text-[#00C896] font-medium">
           <Bookmark size={24} color="#999BA7" />
-          <span className="hidden sm:inline font-montserrat font-normal text-base leading-none tracking-normal">
+          <span className="hidden mt-1 sm:inline font-montserrat font-normal text-base leading-none tracking-normal">
             {t("companyCard.view")}
           </span>{" "}
         </div>

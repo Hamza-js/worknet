@@ -7,8 +7,8 @@ const Jobs = async () => {
   const t = await getTranslations("JobsPage");
 
   return (
-    <section className="py-10 md:py-22 bg-gray-50 text-center">
-      <div className="container mx-auto px-4 max-w-[1464]">
+    <section className="py-10 md:py-22 md:px-12 w-full bg-gray-50 text-center">
+      <div className=" mx-auto px-4 max-w-[1750px]">
         <h2 className="text-2xl md:text-3xl font-bold text-[#1C1B1B] mb-3">
           {t("title")}
         </h2>

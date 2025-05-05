@@ -139,7 +139,7 @@ export default function EmployersListing() {
         </div>
 
         {/* Job Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-4">
           {paginatedEmployers.map((employer, idx) => (
             <CompanyCard key={idx} {...employer} />
           ))}
