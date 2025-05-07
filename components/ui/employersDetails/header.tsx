@@ -13,26 +13,25 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white py-3 relative h-36 rounded-2xl overflow-hidden">
+    <header className="py-5 relative h-[221px] rounded-[22px] overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${bgImage.src})` }}
       ></div>
 
       <div className="flex justify-between items-center px-3 relative z-10">
-        {/* Back Button with Tooltip */}
         <Hint label="Back" side="top">
           <span
             onClick={handleGoBack}
-            className="bg-white p-2 cursor-pointer text-sm rounded-md"
+            className="bg-white flex items-center justify-center cursor-pointer w-[56px] h-[56px] rounded-[12px]"
           >
-            <ChevronLeft size={18} className="cursor-pointer" />
+            <ChevronLeft size={24} className="cursor-pointer" />
           </span>
         </Hint>
 
         {/* Save Button */}
-        <span className="bg-white flex space-x-1 items-center p-2 cursor-pointer text-sm rounded-md">
-          <BookmarkMinus size={18} color="#999BA7" />
+        <span className="bg-white flex space-x-1 items-center p-2 cursor-pointer w-[140px] h-[57px] rounded-[12px] pt-[15px] pr-[24px] pb-[15px] pl-[24px] gap-[8px] font-[Montserrat] font-medium text-[16px] leading-[16px] tracking-normal text-center">
+          <BookmarkMinus size={27} color="#999BA7" />
           <span>Պահել</span>
         </span>
       </div>

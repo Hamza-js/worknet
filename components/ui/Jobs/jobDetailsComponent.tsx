@@ -5,40 +5,41 @@ import { Briefcase, Calendar, Clock, MapPin, Send, User } from "lucide-react"; /
 // Define the component with proper return type
 const JobDetailsComponent: React.FC = () => {
   return (
-    <div className=" mx-auto bg-white  rounded-2xl p-4">
+    <div className=" bg-white w-full h-auto  rounded-[30px] pt-[32px] pr-[40px] pb-[32px] pl-[40px] gap-[10px]">
       {/* Header */}
-      <div className="flex justify-between items-center p-2 ">
-        <div className="flex flex-col items-start">
-          <p className="text-lg mb-2 md:text-xl font-semibold text-gray-800">
+      <div className="flex justify-between items-center h-[103px] border-b border-[#999BA7]">
+        <div className="flex flex-col items-start gap-4">
+          <p className="font-[Montserrat] font-semibold text-[32px] leading-[100%] tracking-normal text-center text-gray-800">
             Բարմենի օգնական
           </p>
-          <div className=" gap-3 mt-2 flex flex-col md:flex-row">
-            <span className="text-sm text-gray-900 flex items-center">
-              <User size={16} className="mr-1" color="#999BA7" />
+          <div className="gap-3 flex">
+            <span className="font-[Montserrat] font-normal text-[16px] leading-[16px] tracking-normal text-gray-900 flex items-center">
+              <User size={24} className="mr-2" color="#999BA7" />
               Բարմեն
             </span>
-            <span className="text-sm text-gray-900 flex items-center">
-              <MapPin size={16} className="mr-1" color="#999BA7" />
+            <span className="font-[Montserrat] font-normal text-[16px] leading-[16px] tracking-normal text-gray-900 flex items-center">
+              <MapPin size={24} className="mr-2" color="#999BA7" />
               Երևան
             </span>
-            <span className="text-sm text-gray-900 flex items-center">
-              <Briefcase size={16} className="mr-1" color="#999BA7" />
+            <span className="font-[Montserrat] font-normal text-[16px] leading-[16px] tracking-normal text-gray-900 flex items-center">
+              <Briefcase size={24} className="mr-2" color="#999BA7" />
               Պայմանագրային
             </span>
-            <span className="text-sm text-gray-900 flex items-center">
-              <Clock size={16} className="mr-1" color="#999BA7" />
+            <span className="font-[Montserrat] font-normal text-[16px] leading-[16px] tracking-normal text-gray-900 flex items-center">
+              <Clock size={24} className="mr-2" color="#999BA7" />
               Ամբողջ դրույք
             </span>
           </div>
         </div>
-        <Button variant="primary" size="small">
-          <Send className="mr-2" color="white" size={18} fill="white" />
+        <Button
+          className=" w-[178px] h-[56px] font-[Montserrat] font-medium text-[16px] leading-[16px] tracking-normal text-center"
+          variant="primary"
+          size="small"
+        >
+          <Send className="mr-2" color="white" size={20} fill="white" />
           Դիմել
         </Button>
       </div>
-
-      {/* Separator */}
-      <span className="block border-t border-[#999BA7] mb-6 mt-4 p-2 "></span>
 
       {/* Content */}
       <div className="flex flex-col text-gray-900 gap-6 md:gap-10 items-start">
