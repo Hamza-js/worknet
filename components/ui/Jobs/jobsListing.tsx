@@ -15,6 +15,7 @@ import {
 import JobCard from "@/components/shared/JobCard";
 import { useTranslations } from "next-intl";
 import JobCardMobile from "@/components/shared/JobCardMobile";
+import Link from "next/link";
 
 export default function JobListings() {
   const t = useTranslations("JobsPage");

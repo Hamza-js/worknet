@@ -1,22 +1,19 @@
 "use client";
 
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   Ellipsis,
-  MapPin,
   Search,
   SlidersHorizontal,
 } from "lucide-react";
-import JobCard from "@/components/shared/JobCard";
-import EmployeeCard from "@/components/shared/EmployeeCard";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import CompanyCard from "@/components/shared/CompanyCard";
+import Link from "next/link";
 
 const employers = Array.from({ length: 50 }, (_, i) => {
   const names = [
@@ -141,7 +138,9 @@ export default function EmployersListing() {
         {/* Job Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-4">
           {paginatedEmployers.map((employer, idx) => (
-            <CompanyCard key={idx} {...employer} />
+            <Link href="/employers/123" className="cursor-pointer">
+              <CompanyCard key={idx} {...employer} />
+            </Link>
           ))}
         </div>
 
