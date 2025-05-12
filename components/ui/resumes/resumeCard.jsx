@@ -10,6 +10,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const ResumesCard = ({ avatar }) => {
   return (
@@ -47,13 +48,15 @@ export const ResumesCard = ({ avatar }) => {
           <ArrowDown size={24} color="#999BA7" />
           Դիտել կայքում
         </Button>
-        <Button
-          variant="ghost"
-          className="w-[170px] h-[56px] gap-2 p-4 rounded-[20px] border border-[#00CDAC] font-montserrat text-base font-normal leading-4 tracking-normal"
-        >
-          <Eye size={24} color="#999BA7" />
-          Խմբագրել
-        </Button>
+        <Link href="/dashboard/resumes/123">
+          <Button
+            variant="ghost"
+            className="w-[170px] h-[56px] gap-2 p-4 rounded-[20px] border border-[#00CDAC] font-montserrat text-base font-normal leading-4 tracking-normal"
+          >
+            <Eye size={24} color="#999BA7" />
+            Խմբագրել
+          </Button>
+        </Link>
       </div>
     </div>
   );
