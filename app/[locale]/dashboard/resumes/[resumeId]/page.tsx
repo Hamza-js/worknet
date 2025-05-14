@@ -20,6 +20,13 @@ import { PercentageCard } from "@/components/ui/personalInfo/percentageCard";
 import { ContactInfoCard } from "@/components/ui/personalInfo/contactInfoCard";
 import { SkillEditorCard } from "@/components/ui/personalInfo/skillCard";
 import { LanguageProficiencyCard } from "@/components/ui/personalInfo/languages";
+import { HobbiesEditorCard } from "@/components/ui/personalInfo/hobbies";
+import { SocialLinksEditorCard } from "@/components/ui/personalInfo/links";
+import { SummaryEditorCard } from "@/components/ui/personalInfo/summaryEditorCard";
+import { EducationEditorCard } from "@/components/ui/personalInfo/educationEditorCard";
+import { ExperienceEditorCard } from "@/components/ui/personalInfo/experienceEditorCard";
+import { ContactEditorCard } from "@/components/ui/personalInfo/contactEditorCard";
+import { ResumeActionsFooter } from "@/components/ui/personalInfo/resumeActionsFooter";
 
 export default function ResumesPage() {
   return (
@@ -56,10 +63,10 @@ export default function ResumesPage() {
         </div>
 
         {/* Main Card */}
-        <Card className="p-4 border-0">
-          <CardContent className="flex flex-col md:flex-row gap-6">
+        <Card className="p-4 border-0 border-none shadow-none outline-0 outline-none">
+          <CardContent className="flex flex-col md:flex-row gap-12 border-none">
             {/* Left Section */}
-            <div className="md:w-[385px] space-y-8">
+            <div className="md:w-[385px] space-y-12 ">
               <PercentageCard
                 percentage={75}
                 title="Արդյունավետություն"
@@ -71,68 +78,24 @@ export default function ResumesPage() {
               <SkillEditorCard />
 
               <LanguageProficiencyCard />
-              <div className="flex flex-wrap gap-1">
-                {["Հայերեն", "Ռուսերեն", "Անգլերեն"].map((lang) => (
-                  <Badge variant="secondary" key={lang}>
-                    {lang}
-                  </Badge>
-                ))}
-              </div>
-              <div className="flex gap-3">
-                {["fb", "linkedin", "github"].map((net) => (
-                  <Button
-                    key={net}
-                    // size="icon"
-                    variant="outline"
-                  >
-                    <Link size={16} />
-                  </Button>
-                ))}
-              </div>
+
+              <HobbiesEditorCard />
+
+              <SocialLinksEditorCard />
             </div>
 
             {/* Right Section */}
-            <div className="md:w-2/3 space-y-6">
-              <div>
-                <h2 className="font-semibold mb-1">Ինձ մասին</h2>
-                <p className="text-sm text-muted-foreground">
-                  Ես աշխատում եմ որպես վեբ ծրագրավորող՝ փորձով առցանց հարթակների
-                  և բիզնես լուծումների ստեղծման գործում։ Ես նաև հետաքրքրված եմ
-                  UX դիզայնով և օգտվողի փորձի օպտիմալացմամբ։
-                </p>
-              </div>
-              <div>
-                <h2 className="font-semibold mb-1">Կրթություն</h2>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>Երևանի Պետական Համալսարան | 2016 – 2018</li>
-                  <li>Հայաստանի Պոլիտեխնիկական Ինստիտուտ | 2012 – 2016</li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="font-semibold mb-1">Աշխատանքային Փորձ</h2>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>
-                    ABC Technology | 2022 - Մինչ օրս – Senior Web Developer
-                  </li>
-                  <li>GT Systems | 2017 – 2021 – Web Developer</li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="font-semibold mb-1">Վկայագրեր</h2>
-                <ul className="text-sm text-muted-foreground">
-                  <li>Google Certificate – Google Analytics Certificate</li>
-                </ul>
-              </div>
-              <div className="flex gap-3">
-                <Button variant="secondary" className="gap-1">
-                  <Edit size={16} /> Խմբագրել
-                </Button>
-                <Button className="gap-1">
-                  <Download size={16} /> Ներբեռնել PDF
-                </Button>
-              </div>
+            <div className="md:w-2/3 space-y-12">
+              <SummaryEditorCard />
+
+              <EducationEditorCard />
+
+              <ExperienceEditorCard />
+
+              <ContactEditorCard />
             </div>
           </CardContent>
+          <ResumeActionsFooter />
         </Card>
       </div>
     </div>

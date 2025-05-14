@@ -85,18 +85,23 @@ export function LanguageProficiencyCard() {
           </DialogTrigger>
           <DialogContent className="!max-w-none !w-[600px]">
             <DialogHeader>
-              <DialogTitle className="text-center text-2xl font-bold">
+              <DialogTitle className="font-[Montserrat arm] font-normal text-[24px] leading-[100%] tracking-[0%] text-center block">
                 Խմբագրել Լեզուն
               </DialogTitle>
+              <span className=" mt-4 font-[Montserrat arm] font-normal text-[20px] leading-[16px] tracking-[0%]">
+                Ավելացնել լեզու
+              </span>
             </DialogHeader>
 
             <div className="space-y-4 mt-4">
-              <Label className="font-semibold">Ավելացնել լեզու</Label>
+              <Label className="font-[Montserrat arm] font-semibold text-[16px] leading-[16px] tracking-[0%]">
+                Ավելացնել լեզու
+              </Label>
               <Select
                 value={selected}
                 onValueChange={(val) => setSelected(val)}
               >
-                <SelectTrigger className="rounded-xl border h-12">
+                <SelectTrigger className=" border h-[64px] gap-[10px] top-[30px] rounded-[16px]  border-solid p-[24px]">
                   <SelectValue placeholder="Ընտրել լեզու" />
                 </SelectTrigger>
                 <SelectContent>
@@ -109,17 +114,25 @@ export function LanguageProficiencyCard() {
               </Select>
 
               <div className="flex justify-between text-sm px-1">
-                <span className="text-gray-500">{selected || "Լեզու"}</span>
-                <span className="text-gray-500">{slider}%</span>
+                <span className="text-gray-500 font-[Montserrat arm] font-normal text-[14px] leading-[16px] tracking-[0%]">
+                  {selected || "Լեզու"}
+                </span>
+                <span className="text-gray-500 font-[Montserrat arm] font-normal text-[14px] leading-[16px] tracking-[0%]">
+                  {slider}%
+                </span>
               </div>
               <Slider
                 value={[slider]}
                 onValueChange={(val) => setSlider(val[0])}
                 max={100}
                 step={1}
+                rangeClassName="bg-[#02AAB0]"
+                thumbClassName="bg-[#02AAB0] border border-[#02AAB0]"
               />
 
-              <Label className="font-semibold">Ձեր ավելացված լեզուները</Label>
+              <Label className="font-[Montserrat arm] font-normal text-[20px] leading-[16px] tracking-[0%] mt-10 pt-5 border border-r-0 border-l-0 border-b-0">
+                Ձեր ավելացված լեզուները
+              </Label>
               <div className="space-y-3">
                 {languages.map((lang, idx) => (
                   <div
@@ -139,22 +152,25 @@ export function LanguageProficiencyCard() {
                         max={100}
                         step={1}
                         className="flex-1"
+                        rangeClassName="bg-[#02AAB0]"
+                        thumbClassName="bg-[#02AAB0] border border-[#02AAB0]"
                       />
                       <Input
                         type="number"
                         value={lang.value}
                         onChange={(e) => updateInput(idx, e.target.value)}
-                        className="w-[60px] text-center h-8"
+                        className="w-[60px] text-center h-12"
                       />
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="flex justify-center">
+              <div className="flex justify-center mt-10">
                 <Button
                   onClick={() => setOpen(false)}
-                  className="bg-teal-500 hover:bg-teal-600 text-white px-6"
+                  variant="primary"
+                  size="medium"
                 >
                   Հաստատել
                 </Button>
@@ -166,14 +182,25 @@ export function LanguageProficiencyCard() {
 
       <hr />
 
-      <div className="space-y-4">
+      <div className="space-y-8">
         {languages.map((lang) => (
-          <div key={lang.name}>
+          <div key={lang.name} className="space-y-2">
             <div className="flex justify-between text-sm font-medium">
-              <span>{lang.name}</span>
-              <span>{lang.value}%</span>
+              <span className="text-gray-500 font-[Montserrat arm] font-normal text-[14px] leading-[16px] tracking-[0%]">
+                {lang.name}
+              </span>
+              <span className="text-gray-500 font-[Montserrat arm] font-normal text-[14px] leading-[16px] tracking-[0%]">
+                {lang.value}%
+              </span>
             </div>
-            <Slider value={[lang.value]} disabled max={100} step={1} />
+            <Slider
+              value={[lang.value]}
+              disabled
+              max={100}
+              step={1}
+              rangeClassName="bg-[#02AAB0]"
+              thumbClassName="bg-[#02AAB0] border border-[#02AAB0]"
+            />
           </div>
         ))}
       </div>
