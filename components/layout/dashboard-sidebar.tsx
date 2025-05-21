@@ -3,54 +3,43 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Icon1 from "../../public/assets/icons/sidebar-icon-1.svg";
+import Icon2 from "../../public/assets/icons/sidebar-icon-2.svg";
+import Icon3 from "../../public/assets/icons/sidebar-icon-3.svg";
+import Icon4 from "../../public/assets/icons/sidebar-icon-4.svg";
+import Icon5 from "../../public/assets/icons/sidebar-icon-5.svg";
+import Icon6 from "../../public/assets/icons/sidebar-icon-6.svg";
+import Icon7 from "../../public/assets/icons/sidebar-icon-7.svg";
+import Icon8 from "../../public/assets/icons/sidebar-icon-8.svg";
+import Icon9 from "../../public/assets/icons/sidebar-icon-9.svg";
+import Icon10 from "../../public/assets/icons/sidebar-icon-10.svg";
+import Icon11 from "../../public/assets/icons/sidebar-icon-11.svg";
 
 import CompanySwitcher from "@/components/layout/company-switcher";
-import {
-  Home,
-  FolderKanban,
-  UserSquare,
-  FileText,
-  Settings,
-  Users,
-  Bell,
-  BarChart,
-  ShieldCheck,
-  LifeBuoy,
-  Grid2x2,
-  Mail,
-  CircleUserRound,
-} from "lucide-react";
 
 const navItems = [
-  { name: "Dashboard", icon: Home, href: "/dashboard" },
-  {
-    name: "Իմ ընկերությունը",
-    icon: FolderKanban,
-    href: "/dashboard/companies",
-  },
+  { name: "Dashboard", icon: Icon3, href: "/dashboard" },
+  { name: "Իմ ընկերությունը", icon: Icon2, href: "/dashboard/companies" },
   {
     name: "Իմ հայտարարությունները",
-    icon: UserSquare,
+    icon: Icon1,
     href: "/dashboard/announcements",
   },
-  {
-    name: "Ստացած ռեզյումեներ",
-    icon: Mail,
-    href: "/dashboard/resumes",
-  },
+  { name: "Ստացած ռեզյումեներ", icon: Icon4, href: "/dashboard/resumes" },
   {
     name: "Անձնական տվյալներ",
-    icon: CircleUserRound,
+    icon: Icon5,
     href: "/dashboard/personal-information",
   },
 ];
+
 const secondaryItems = [
-  { name: "Գնահատման էջ", icon: Users, href: "/dashboard/evaluation" },
-  { name: "Արժանապատիվ", icon: Bell, href: "/dashboard/notifications" },
-  { name: "Ընթացակարգեր", icon: BarChart, href: "/dashboard/procedures" },
-  { name: "Տվյալներ", icon: ShieldCheck, href: "/dashboard/data" },
-  { name: "Օգնություն", icon: LifeBuoy, href: "/dashboard/help" },
-  { name: "Այլ", icon: Grid2x2, href: "/dashboard/other" },
+  { name: "Գլխավոր էջ", icon: Icon6, href: "/dashboard/evaluation" },
+  { name: "Աշխատանք", icon: Icon7, href: "/dashboard/notifications" },
+  { name: "Գործատուներ", icon: Icon8, href: "/dashboard/procedures" },
+  { name: "Փաթեթներ", icon: Icon9, href: "/dashboard/data" },
+  { name: "Օգնություն", icon: Icon10, href: "/dashboard/help" },
+  { name: "Այլ", icon: Icon11, href: "/dashboard/other" },
 ];
 
 export default function DashboardSidebar() {
@@ -87,8 +76,9 @@ export default function DashboardSidebar() {
             className={`flex items-center gap-3 rounded-[10px] px-3 py-2 h-[56px] w-full font-montserrat text-base font-normal leading-4 tracking-normal 
               ${isActive ? "bg-[#C5D1DB33]" : "hover:bg-[#C5D1DB33]"}`}
           >
-            <Icon className="h-6 w-6 text-[#999BA7]" />
-            {name}
+            <img src={Icon.src} alt={`${name} icon`} className="h-6 w-6" />
+
+            <span className="mt-[6px]">{name}</span>
           </Link>
         );
       })}
@@ -108,7 +98,7 @@ export default function DashboardSidebar() {
       )}
 
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex md:flex-col w-[395px] h-full bg-white p-5 border border-r-[#EAEAEA] space-y-6">
+      <aside className="hidden md:flex md:flex-col w-[395px] min-h-screen bg-white p-5 border border-r-[#EAEAEA] space-y-6">
         <CompanySwitcher />
         {renderNav(navItems)}
         <hr className="my-4" />
