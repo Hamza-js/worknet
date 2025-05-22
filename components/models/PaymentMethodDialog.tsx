@@ -106,10 +106,10 @@ export default function PaymentMethodDialog({
           <div className="space-y-2">
             <div className="font-montserratArm text-[16px] leading-[20px] text-center space-y-3">
               <div>
-                <p className="font-montserratArm text-[#999BA7] font-normal text-[16px] leading-[25px] tracking-[0%] text-center">
+                <p className="break-words max-w-full font-montserratArm text-[#999BA7] font-normal text-[16px] leading-[25px] tracking-[0%] text-center">
                   Կատարեք փոխանցում նշված տվյալներով և կցեք անդորագիրը:
                 </p>
-                <p className="font-montserratArm text-[#999BA7] font-normal text-[16px] leading-[25px] tracking-[0%] text-center">
+                <p className="break-words max-w-full font-montserratArm text-[#999BA7] font-normal text-[16px] leading-[25px] tracking-[0%] text-center">
                   Ակտիվացվում է մի քանի ժամվա ընթացքում:
                 </p>
               </div>
@@ -147,12 +147,12 @@ export default function PaymentMethodDialog({
         return (
           <div className="space-y-4">
             <div className="font-montserratArm text-[16px] leading-[20px] text-center space-y-3">
-              <div>
-                <p className="font-montserratArm text-[#999BA7] font-normal text-[16px] leading-[25px] tracking-[0%] text-center">
+              <div className="md:px-10">
+                <p className="break-words max-w-full font-montserratArm text-[#999BA7] font-normal text-[16px] leading-[25px] tracking-[0%] text-center">
                   Դուրս կգրվի հաշիվ-ապրանքագիր Ձեր կազմակերպության տվյալներով և
                   կակտիվացվի համապատասխան փաթեթը:
                 </p>
-                <p className="font-montserratArm text-[#999BA7] font-normal text-[16px] leading-[25px] tracking-[0%] text-center">
+                <p className="break-words max-w-full font-montserratArm text-[#999BA7] font-normal text-[16px] leading-[25px] tracking-[0%] text-center">
                   Ակտիվացվում է մի քանի ժամվա ընթացքում:
                 </p>
               </div>
@@ -171,7 +171,7 @@ export default function PaymentMethodDialog({
               />
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-2 max-w-fu">
               <Label
                 className="font-montserratArm font-semibold text-[16px] leading-[16px] text-black"
                 htmlFor="address"
@@ -181,7 +181,7 @@ export default function PaymentMethodDialog({
               <Select>
                 <SelectTrigger
                   id="address"
-                  className="h-[56px] rounded-[16px] p-[20px] gap-[10px] border border-[#1C1B1B] font-montserratArm text-[16px] leading-[16px]"
+                  className="w-full h-[56px] rounded-[16px] px-4 py-3 border border-[#1C1B1B] font-montserratArm text-[16px] leading-[16px]"
                 >
                   <SelectValue placeholder="Ընտրել կազմակերպության հասցեն" />
                 </SelectTrigger>
@@ -197,12 +197,12 @@ export default function PaymentMethodDialog({
 
   return (
     <Dialog.Dialog open={open} onOpenChange={onOpenChange}>
-      <Dialog.DialogContent className="max-w-[961px] w-full md:min-w-[961px] rounded-[40px] p-8 gap-4 border border-[#EAEAEA]">
+      <Dialog.DialogContent className="max-w-[961px] w-[calc(100vw-32px)] max-h-[90vh] sm:min-w-[961px] rounded-[20px] sm:rounded-[40px] p-6 sm:p-8 gap-4 border border-[#EAEAEA] overflow-y-auto scrollbar-hide">
         <Dialog.DialogHeader>
-          <Dialog.DialogTitle className="text-center font-montserratArm font-normal text-[24px] leading-[28px]">
+          <Dialog.DialogTitle className="text-center font-montserratArm font-normal text-[20px] sm:text-[24px] leading-[28px] break-words">
             Վճարման տարբերակ
           </Dialog.DialogTitle>
-          <Dialog.DialogDescription className="text-center font-montserratArm font-normal text-[16px] leading-[20px] text-[#999BA7]">
+          <Dialog.DialogDescription className="text-center font-montserratArm font-normal text-[16px] leading-[20px] text-[#999BA7] break-words">
             Ընտրք Ձեզ հարմար վճարման տարբերակ
           </Dialog.DialogDescription>
         </Dialog.DialogHeader>
@@ -215,14 +215,14 @@ export default function PaymentMethodDialog({
               className={`flex flex-col items-center justify-center p-4 rounded-[20px] text-center space-y-2 transition ${
                 selectedMethod === method.id
                   ? "border border-[#23BA97]"
-                  : "border-[#EAEAEA] border "
+                  : "border-[#EAEAEA] border"
               }`}
             >
-              <Image src={method.icon} alt={method.icon} />
-              <span className="text-[14px] font-montserratArm font-medium leading-[16px]">
+              <Image src={method.icon} alt={method.label} />
+              <span className="text-[14px] font-montserratArm font-medium leading-[16px] break-words">
                 {method.label}
               </span>
-              <span className="text-[14px] font-montserratArm font-medium leading-[16px]">
+              <span className="text-[14px] font-montserratArm font-medium leading-[16px] break-words">
                 {method.labe2}
               </span>
             </button>
