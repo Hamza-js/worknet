@@ -19,17 +19,17 @@ export default function CompanyCard({
   const t = useTranslations("HomePage");
 
   return (
-    <div className="relative bg-white h-[352px] max-w-[361px] border border-[#EAEAEA] rounded-[30px] pt-18 pr-8 pl-8 pb-2 text-center">
+    <div className="relative bg-white h-[228px] md:h-[352px] gap-2 md:gap-4 max-w-[361px] border border-[#EAEAEA] rounded-[30px] pt-[20px] md:pt-20 pr-2 pl-2 pb-2 text-center">
       {/* Top-right teal dot */}
 
-      <div className="absolute  top-4 md:top-9 right-4 md:right-8 w-6 h-6 rounded-full gap-2 p-1 flex items-center justify-center bg-[#FAFAFA]">
+      <div className="absolute top-4 md:top-9 right-4 md:right-8 w-6 h-6 rounded-full gap-2 p-1 flex items-center justify-ceter bg-[#FAFAFA]">
         <Hint label="Online" side="top">
           <div className=" cursor-pointer w-[10px] h-[10px]  rounded-full bg-[#02B1AF]"></div>
         </Hint>
       </div>
 
       {/* Logo in black circle */}
-      <div className="flex justify-center mb-2 md:mb-4">
+      <div className="flex justify-center md:mb-4">
         <div className="w-18 h-18 rounded-full bg-black flex items-center justify-center overflow-hidden">
           <Image
             src={logo}
@@ -42,9 +42,9 @@ export default function CompanyCard({
       </div>
 
       {/* Text */}
-      <div>
+      <div className="flex flex-col items-center justify-center">
         <h3
-          className="font-montserrat font-medium text-lg leading-4 tracking-normal text-center pt-2 text-[#1C1B1B] min-h-[28px] max-h-[28px] overflow-hidden text-ellipsis font-montserrat md:font-medium text-[20px] md:leading-[16px] md:text-center"
+          className="font-montserrat font-medium text-[14px] leading-4 tracking-normal text-center pt-2 text-[#1C1B1B] min-h-[28px] max-h-[28px] overflow-hidden text-ellipsis font-montserrat md:font-medium md:text-[20px] md:leading-[16px] md:text-center"
           style={{
             display: "-webkit-box",
             WebkitLineClamp: 2,
@@ -54,7 +54,7 @@ export default function CompanyCard({
           {name}
         </h3>
         <p
-          className="font-montserrat font-normal text-base leading-5 tracking-normal text-center pt-2 text-[#999BA7] overflow-hidden text-ellipsis font-montserrat md:font-normal text-[16px] md:leading-[21px] md:text-center"
+          className="font-montserrat  text-[12px] md:max-w-[250px] font-mono text-base leading-5 tracking-normal text-center pt-1 md:pt-2 text-[#999BA7] overflow-hidden text-ellipsis font-montserrat md:font-normal md:text-[16px] md:leading-[21px] md:text-center"
           style={{
             display: "-webkit-box",
             WebkitLineClamp: 2,
@@ -66,21 +66,21 @@ export default function CompanyCard({
       </div>
 
       {/* Bottom row */}
-      <div className="absolute bottom-5 left-0 right-0 flex items-center justify-between text-[#999BA7] h-[64px] pt-[17px] pr-[10px] pb-[17px] pl-[10px] gap-[60px] md:gap-[30px]">
-        <div className="flex items-center flex-1 justify-center gap-1 font-inter font-normal text-base leading-none tracking-normal">
+      <div className="absolute bottom-1 left-0 right-0 flex items-center justify-center text-[#999BA7] h-[64px] px-[10px] gap-4">
+        <div className="flex flex-1 items-center justify-center gap-1 font-inter text-base">
           <Hint label="Jobs" side="top">
             <FileText className="cursor-pointer" size={24} />
           </Hint>
-          <span className="pt-1 ml-1 font-montserrat font-normal text-base leading-none tracking-normal">
-            {jobsCount}
-          </span>
+          <span className="pt-1 ml-1 font-montserrat">{jobsCount}</span>
         </div>
-        <span className="bg-[#999BA7] w-[1px] h-6"></span>
-        <div className="flex flex-1 items-center justify-center text-center gap-1 text-[#00C896] font-medium">
+
+        <span className="w-px h-6 bg-[#999BA7] mx-4" />
+
+        <div className="flex flex-1 items-center justify-center gap-1 text-[#00C896] font-medium text-base">
           <Bookmark size={24} color="#999BA7" />
-          <span className="hidden mt-1 sm:inline font-montserrat font-normal text-base leading-none tracking-normal">
+          <span className="hidden sm:inline mt-1 font-montserrat">
             {t("companyCard.view")}
-          </span>{" "}
+          </span>
         </div>
       </div>
     </div>

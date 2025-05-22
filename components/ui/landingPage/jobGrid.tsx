@@ -6,27 +6,27 @@ import JobCardMobile from "@/components/shared/JobCardMobile";
 
 const jobs = [
   {
-    logo: "/assets/images/brandsLogos/1.png",
+    logo: "https://logo.clearbit.com/apple.com",
     position: "Գործակալ",
     company: "Beko",
   },
   {
-    logo: "/assets/images/brandsLogos/2.png",
+    logo: "https://logo.clearbit.com/apple.com",
     position: "Խորհրդատու-վաճառող",
     company: "Foodbar",
   },
   {
-    logo: "/assets/images/brandsLogos/3.png",
+    logo: "https://logo.clearbit.com/apple.com",
     position: "SMM մասնագետ",
     company: "ARMOS",
   },
   {
-    logo: "/assets/images/brandsLogos/4.png",
+    logo: "https://logo.clearbit.com/apple.com",
     position: "Հաճախորդի սպասարկող",
     company: "Shen",
   },
   {
-    logo: "/assets/images/brandsLogos/5.png",
+    logo: "https://logo.clearbit.com/apple.com",
     position: "Հաշվետար",
     company: "Gulf",
   },

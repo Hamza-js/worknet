@@ -73,9 +73,9 @@ export default function JobCard({
         </Hint>
         <Link
           href={link}
-          className="border border-[#23BA97] text-[#1C1B1B] px-3 py-1.5 text-sm hover:bg-gray-100 hover:border-[#999BA7] transition flex items-center w-[138px] h-[56px] rounded-[16px] pt-[19px] pr-[24px] pb-[19px] pl-[24px] gap-[10px]"
+          className="border border-[#23BA97] text-[#1C1B1B] px-3 py-1.5 text-[16px] hover:bg-gray-100 hover:border-[#999BA7] transition flex items-center w-[138px] h-[56px] rounded-[16px] pt-[19px] pr-[24px] pb-[19px] pl-[24px] gap-[10px]"
         >
-          Դիտել <ArrowRight color="#1C1B1B" size={18} />
+          Դիտել <ArrowRight color="#1C1B1B" size={24} />
         </Link>
       </div>
     </div>
