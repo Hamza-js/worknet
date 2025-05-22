@@ -7,6 +7,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Ellipsis,
+  ListFilter,
   Search,
   SlidersHorizontal,
 } from "lucide-react";
@@ -14,6 +15,13 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import CompanyCard from "@/components/shared/CompanyCard";
 import Link from "next/link";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
 
 const employers = Array.from({ length: 50 }, (_, i) => {
   const names = [
@@ -89,6 +97,52 @@ export default function EmployersListing() {
 
   return (
     <div className="flex flex-col md:flex-row gap-4 py-10 md:py-20 w-full">
+      {/* Mobile Filter Button */}
+      <div className="fixed bottom-36 right-4 z-50 md:hidden">
+        <Sheet>
+          <SheetTrigger asChild>
+            <button className="bg-[linear-gradient(90deg,#02AAB0_0%,#00CDAC_100%)]  rounded-[16px] w-14 h-14 flex items-center justify-center">
+              <ListFilter className="w-6 h-6 text-white" />
+            </button>
+          </SheetTrigger>
+          <SheetContent side="left" className="w-4/5 max-w-sm">
+            <SheetHeader>
+              <SheetTitle>{t("Filter")}</SheetTitle>
+            </SheetHeader>
+
+            {/* Filter content (copied from your <aside>) */}
+            <div className="mt-4 space-y-6">
+              <div className="bg-white border rounded-xl p-4">
+                <details open>
+                  <summary className="flex items-center justify-between cursor-pointer font-medium text-sm text-[#1C1B1B]">
+                    <span className="flex items-center gap-2">
+                      <SlidersHorizontal className="w-4 h-4 text-[#1C1B1B]" />
+                      {t("region")}
+                    </span>
+                    <ChevronDown color="#999BA7" className="w-4 h-4" />
+                  </summary>
+                  <div className="mt-4 space-y-2 overflow-y-auto pr-1 custom-scroll">
+                    {fields.map((field) => (
+                      <label
+                        key={field}
+                        className="flex items-center space-y-2 gap-2 text-sm"
+                      >
+                        <Checkbox
+                          className="border border-[#999BA7] data-[state=checked]:border-[#999BA7]text-[#999BA7] data-[state=checked]:text-[#999BA7] data-[state=checked]:bg-white h-5 w-5"
+                          id={field}
+                        />
+                        <span className="font-[Montserrat arm] font-normal text-[16px] leading-[100%] tracking-[0%]">
+                          {field}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+                </details>
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
       {/* Sidebar Filters */}
       <aside className="hidden md:block w-full md:w-1/4 space-y-4">
         <h2 className="h-[72px] p-6 font-montserrat font-extrabold text-[20px] leading-none tracking-normal text-center uppercase bg-white rounded-[20px] border border-[#EAEAEA] flex items-center">
@@ -111,7 +165,10 @@ export default function EmployersListing() {
                 key={field}
                 className="flex items-center space-y-2 gap-2 text-sm"
               >
-                <Checkbox id={field} />
+                <Checkbox
+                  className="border border-[#999BA7] data-[state=checked]:border-[#999BA7]text-[#999BA7] data-[state=checked]:text-[#999BA7] data-[state=checked]:bg-white h-5 w-5"
+                  id={field}
+                />
                 <span className="font-[Montserrat arm] font-normal text-[16px] leading-[100%] tracking-[0%]">
                   {field}
                 </span>
