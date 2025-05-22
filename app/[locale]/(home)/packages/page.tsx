@@ -8,9 +8,13 @@ import Speaker1 from "./../../../../public/assets/icons/speaker1.svg";
 import Speaker2 from "./../../../../public/assets/icons/speaker2.svg";
 import Speaker3 from "./../../../../public/assets/icons/speaker3.svg";
 import Speaker4 from "./../../../../public/assets/icons/speaker4.svg";
+import PaymentMethodDialog from "@/components/models/PaymentMethodDialog";
+
 import Image from "next/image";
 
 const Packages = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
   const t = useTranslations("PackagesPage");
   const [isYearly, setIsYearly] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
@@ -170,7 +174,7 @@ const Packages = () => {
 
               <div className="mt-6">
                 <Button
-                  onClick={() => setSelectedPlan(plan.id)}
+                  onClick={() => setDialogOpen(true)}
                   variant={plan.id === "standard" ? "primary" : "secondary"}
                   size="small"
                   className={`w-full h-[48px] py-3 rounded-[24px] text-white font-semibold  ${
@@ -184,6 +188,7 @@ const Packages = () => {
           ))}
         </div>
       </div>
+      <PaymentMethodDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </section>
   );
 };
