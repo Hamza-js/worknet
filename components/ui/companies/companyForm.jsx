@@ -11,9 +11,9 @@ import {
 
 export function CompanyForm() {
   return (
-    <div className="w-full bg-white flex flex-col items-center justify-center gap-[20px] px-[24px] py-[16px] rounded-[30px] border border-[#999BA7]">
+    <div className="relative w-full min-h-[863px] bg-white flex flex-col items-center justify-start gap-[20px] px-[24px] py-[16px] rounded-[30px] border border-[#999BA7]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4  w-full">
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Կազմակերպության անվանում{" "}
           </label>
@@ -22,12 +22,12 @@ export function CompanyForm() {
             className="h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]"
           />
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Ոլորտ
           </label>
           <Select>
-            <SelectTrigger className="h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]">
+            <SelectTrigger className="!h-[64px] !min-h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]">
               <SelectValue placeholder="Ընտրել ոլորտը" />
             </SelectTrigger>
             <SelectContent>
@@ -37,7 +37,7 @@ export function CompanyForm() {
             </SelectContent>
           </Select>
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Քաղաք
           </label>
@@ -46,12 +46,12 @@ export function CompanyForm() {
             className="h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]"
           />
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Աշխատակիցների քանակ
           </label>
           <Select>
-            <SelectTrigger className="h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]">
+            <SelectTrigger className="!h-[64px] !min-h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]">
               <SelectValue placeholder="Ընտրել աշխատակիցների քանակը" />
             </SelectTrigger>
             <SelectContent>
@@ -61,7 +61,7 @@ export function CompanyForm() {
             </SelectContent>
           </Select>
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Էլ․ հասցե
           </label>
@@ -70,7 +70,7 @@ export function CompanyForm() {
             className="h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]"
           />
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Կոնտակտ անձ
           </label>
@@ -82,7 +82,7 @@ export function CompanyForm() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Facebook էջ (ըստ ցանկության)
           </label>
@@ -91,7 +91,7 @@ export function CompanyForm() {
             className="h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]"
           />
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Instagram էջ (ըստ ցանկության)
           </label>
@@ -100,7 +100,7 @@ export function CompanyForm() {
             className="h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]"
           />
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             LinkedIn էջ (ըստ ցանկության)
           </label>
@@ -111,17 +111,17 @@ export function CompanyForm() {
         </div>
       </div>
 
-      <div className=" w-full">
+      <div className=" w-full h-[94px] flex flex-col justify-between">
         <label className="block mb-1 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
           Կազմակերպության նկարագրություն
         </label>
         <Textarea
           placeholder="Մուտքագրեք նկարագրություն"
-          className="h-[270px] p-6 gap-[10px] rounded-[16px] border border-black font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]"
+          className="min-h-[270px] p-6 gap-[10px] rounded-[16px] border border-black font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]"
         />
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center absolute bottom-4 ">
         <Button
           variant="primary"
           size="large"
