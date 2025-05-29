@@ -79,7 +79,7 @@ export function LanguageProficiencyCard() {
         </h2>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <button className="cursor-pointer shadow-sm h-10 w-10 rounded-lg flex items-center justify-center">
+            <button className="cursor-pointer shadow-lg h-10 w-10 rounded-lg flex items-center justify-center">
               <Pencil size={24} color="#999BA7" />
             </button>
           </DialogTrigger>
@@ -101,7 +101,7 @@ export function LanguageProficiencyCard() {
                 value={selected}
                 onValueChange={(val) => setSelected(val)}
               >
-                <SelectTrigger className=" border h-[64px] gap-[10px] top-[30px] rounded-[16px]  border-solid p-[24px]">
+                <SelectTrigger className="!h-[64px] !min-h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]">
                   <SelectValue placeholder="Ընտրել լեզու" />
                 </SelectTrigger>
                 <SelectContent>
@@ -186,10 +186,10 @@ export function LanguageProficiencyCard() {
         {languages.map((lang) => (
           <div key={lang.name} className="space-y-2">
             <div className="flex justify-between text-sm font-medium">
-              <span className="text-gray-500 font-[Montserrat arm] font-normal text-[14px] leading-[16px] tracking-[0%]">
+              <span className="text-gray-00 font-[Montserrat arm] font-normal text-[14px] leading-[16px] tracking-[0%]">
                 {lang.name}
               </span>
-              <span className="text-gray-500 font-[Montserrat arm] font-normal text-[14px] leading-[16px] tracking-[0%]">
+              <span className="text-gray-00 font-[Montserrat arm] font-normal text-[14px] leading-[16px] tracking-[0%]">
                 {lang.value}%
               </span>
             </div>

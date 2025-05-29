@@ -92,7 +92,7 @@ export default function ResumesPage() {
 
               <ExperienceEditorCard />
 
-              <ContactEditorCard />
+              {/* <ContactEditorCard /> */}
             </div>
           </CardContent>
           <ResumeActionsFooter />

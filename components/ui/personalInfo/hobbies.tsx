@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Pencil, X } from "lucide-react";
 import clsx from "clsx";
+import { Badge } from "@/components/ui/badge";
 
 export function HobbiesEditorCard() {
   const allCategories = [
@@ -50,14 +51,14 @@ export function HobbiesEditorCard() {
         </h2>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <button className="cursor-pointer shadow-sm h-10 w-10 rounded-lg flex items-center justify-center">
+            <button className="cursor-pointer shadow-lg h-10 w-10 rounded-lg flex items-center justify-center">
               <Pencil className="cursor-pointer" size={24} color="#999BA7" />
             </button>
           </DialogTrigger>
           <DialogContent className="!max-w-none !w-[961px] py-6 px-12 rounded-4xl">
             <DialogHeader>
-              <DialogTitle className="text-center text-2xl font-bold">
-                Խմբագրել Հոբբիները
+              <DialogTitle className="text-center text-2xl font-normal">
+                Խմբագրել <strong>Հոբբիները</strong>
               </DialogTitle>
             </DialogHeader>
 
@@ -124,12 +125,9 @@ export function HobbiesEditorCard() {
 
       <div className="flex flex-wrap gap-3">
         {selected.map((skill) => (
-          <span
-            key={skill}
-            className="rounded-full bg-gray-200 px-4 py-1 text-sm"
-          >
+          <Badge key={skill} variant="secondary">
             {skill}
-          </span>
+          </Badge>
         ))}
       </div>
     </div>

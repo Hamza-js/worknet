@@ -11,6 +11,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Pencil } from "lucide-react";
 import { useState } from "react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 type Experience = {
   company: string;
@@ -76,31 +83,31 @@ export function ExperienceEditorCard() {
       </h2>
 
       {experiences.map((exp, index) => (
-        <div
-          key={`${exp.company}-${index}`}
-          className="flex justify-between items-start"
-        >
-          <div>
+        <div key={`${exp.company}-${index}`} className="flex gap-5 items-start">
+          <div className="text-[20px] text-black">
             <p className="font-semibold">
               {exp.company} | {exp.start} - {exp.end}
             </p>
             <p>{exp.position}</p>
           </div>
-          <button onClick={() => openEditor(index)} className="mt-1">
-            <Pencil size={18} color="#999BA7" />
+          <button
+            onClick={() => openEditor(index)}
+            className="shadow-lg h-10 w-10 rounded-lg flex items-center justify-center"
+          >
+            <Pencil className="cursor-pointer" size={18} color="#999BA7" />
           </button>
         </div>
       ))}
 
       <button
-        className="text-[#00B894] text-sm font-semibold"
+        className="text-[#00B894] text-[16px] font-semibold cursor-pointer"
         onClick={() => openEditor(null)}
       >
         + Ավելացնել
       </button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="!max-w-none !w-[700px] py-6 px-12 rounded-4xl">
+        <DialogContent className="!max-w-none md:!w-[961px] py-6 px-12 rounded-[40px]">
           <DialogHeader>
             <DialogTitle className="text-center text-2xl font-bold">
               {editingIndex !== null
@@ -110,53 +117,67 @@ export function ExperienceEditorCard() {
           </DialogHeader>
 
           <div className="space-y-4 mt-4">
-            <div>
-              <label className="block mb-1 font-semibold">
+            <div className="flex-1 flex flex-col h-[94px] justify-between">
+              <label className="block mb-1 text-[16px] font-semibold">
                 Կազմակերպության անվանում
               </label>
               <Input
+                className="!h-[64px] !min-h-[64px]"
                 value={form.company}
                 onChange={(e) => setForm({ ...form, company: e.target.value })}
               />
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-1">
-                <label className="block mb-1 font-semibold">Ուսման սկիզբ</label>
-                <select
-                  className="w-full border rounded px-3 py-2"
+              <div className="flex-1 flex flex-col h-[94px] justify-between">
+                <label className="block mb-1 text-[16px] font-semibold">
+                  Աշխատանքի սկիզբ
+                </label>
+                <Select
                   value={form.start}
-                  onChange={(e) => setForm({ ...form, start: e.target.value })}
+                  onValueChange={(value) => setForm({ ...form, start: value })}
                 >
-                  {years.map((year) => (
-                    <option key={year} value={year}>
-                      {year}
-                    </option>
-                  ))}
-                </select>
+                  <SelectTrigger className="!h-[64px] !min-h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]">
+                    <SelectValue placeholder="Ընտրել տարեթիվ" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {years.map((year) => (
+                      <SelectItem key={year} value={year}>
+                        {year}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
 
-              <div className="flex-1">
-                <label className="block mb-1 font-semibold">Ուսման ավարտ</label>
-                <select
-                  className="w-full border rounded px-3 py-2"
+              <div className="flex-1 flex flex-col h-[94px] justify-between">
+                <label className="block mb-1 text-[16px] font-semibold">
+                  Աշխատանքի ավարտ
+                </label>
+                <Select
                   value={form.end}
-                  onChange={(e) => setForm({ ...form, end: e.target.value })}
+                  onValueChange={(value) => setForm({ ...form, end: value })}
                 >
-                  {years.map((year) => (
-                    <option key={year} value={year}>
-                      {year}
-                    </option>
-                  ))}
-                </select>
+                  <SelectTrigger className="!h-[64px] !min-h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]">
+                    <SelectValue placeholder="Ընտրել տարեթիվ" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {years.map((year) => (
+                      <SelectItem key={year} value={year}>
+                        {year}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
             </div>
 
-            <div>
-              <label className="block mb-1 font-semibold">
+            <div className="flex-1 flex flex-col h-[94px] justify-between">
+              <label className="block mb-1 text-[16px] font-semibold">
                 Դիրք/մասնագիտություն
               </label>
               <Input
+                className="!h-[64px] !min-h-[64px]"
                 value={form.position}
                 onChange={(e) => setForm({ ...form, position: e.target.value })}
               />

@@ -62,7 +62,7 @@ export function ContactInfoCard() {
           }}
         >
           <DialogTrigger asChild>
-            <button className="cursor-pointer shadow-sm h-10 w-10 rounded-lg flex items-center justify-center">
+            <button className="cursor-pointer shadow-lg h-10 w-10 rounded-lg flex items-center justify-center">
               <Pencil size={24} color="#999BA7" />
             </button>
           </DialogTrigger>
@@ -115,16 +115,16 @@ export function ContactInfoCard() {
 
       <hr />
 
-      <div className="flex flex-col gap-2 text-sm text-gray-700">
+      <div className="flex flex-col gap-4 text-gray-700 ">
         <div className="flex items-center gap-3">
           <Mail size={24} className="text-gray-500" />
-          <span className="font-[Montserrat arm] font-normal text-[16px] leading-[16px] tracking-[0%] text-center">
+          <span className="font-[Montserrat arm] font-normal text-[18px] leading-[16px] tracking-[0%] text-center">
             {phone}
           </span>
         </div>
         <div className="flex items-center gap-3">
           <Phone size={24} className="text-gray-500" />
-          <span className="font-[Montserrat arm] font-normal text-[16px] leading-[16px] tracking-[0%] text-center">
+          <span className="font-[Montserrat arm] font-normal text-[18px] leading-[16px] tracking-[0%] text-center">
             {email}
           </span>
         </div>

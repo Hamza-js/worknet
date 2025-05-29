@@ -16,15 +16,7 @@ import { Badge } from "@/components/ui/badge";
 import { Pencil, X } from "lucide-react";
 
 export function SkillEditorCard() {
-  const [skills, setSkills] = useState([
-    "Html",
-    "Css3",
-    "Java Script",
-    "Php",
-    "Laravel",
-    "Bootstrap",
-    "Github",
-  ]);
+  const [skills, setSkills] = useState(["Html", "Css3", "Java Script", "Php"]);
   const [open, setOpen] = useState(false);
   const [newSkill, setNewSkill] = useState("");
 
@@ -48,25 +40,25 @@ export function SkillEditorCard() {
         </h2>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <button className="cursor-pointer shadow-sm h-10 w-10 rounded-lg flex items-center justify-center">
+            <button className="cursor-pointer shadow-lg h-10 w-10 rounded-lg flex items-center justify-center">
               <Pencil className="cursor-pointer" size={24} color="#999BA7" />
             </button>
           </DialogTrigger>
           <DialogContent className="!max-w-none !w-[961px] py-6 px-12 rounded-4xl">
             <DialogHeader>
-              <DialogTitle className="text-center text-2xl font-bold">
-                Խմբագրել Հմտությունները
+              <DialogTitle className="text-center text-2xl font-normal">
+                Խմբագրել <strong>Հմտությունները</strong>
               </DialogTitle>
             </DialogHeader>
             <div className="space-y-4 mt-4">
               <Label className="font-[Montserrat arm] font-semibold text-[16px] leading-[16px]">
                 Հմտություններ
               </Label>
-              <div className="flex flex-wrap gap-2 p-2 h-[64px] rounded-[16px] border border-[#1C1B1B] ">
+              <div className="flex flex-wrap items-center gap-3 p-2 h-[64px] rounded-[16px] border border-[#1C1B1B] ">
                 {skills.map((skill) => (
                   <div
                     key={skill}
-                    className="bg-gray-200 relative rounded-full flex items-center px-3 py-1 text-[18px] font-medium gap-1"
+                    className="bg-[#F2F2F2] relative rounded-[10px] flex items-center px-3 py-1 text-[18px] font-medium gap-1"
                   >
                     {skill}
                     <button
@@ -86,7 +78,7 @@ export function SkillEditorCard() {
                 />
               </div>
 
-              <Label className="font-[Montserrat arm] font-semibold text-[16px] leading-[16px]">
+              <Label className="font-[Montserrat arm] font-semibold text-[16px] leading-[16px] mt-5">
                 Ավելացված Հմտություններ
               </Label>
               <div className="flex flex-wrap gap-2">
@@ -113,7 +105,7 @@ export function SkillEditorCard() {
 
       <hr />
 
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-6">
         {skills.map((skill) => (
           <Badge key={skill} variant="secondary">
             {skill}

@@ -57,7 +57,7 @@ export function SocialLinksEditorCard() {
         </h2>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <button className="shadow-sm h-10 w-10 rounded-lg flex items-center justify-center">
+            <button className="shadow-lg h-10 w-10 rounded-lg flex items-center justify-center">
               <Pencil className="cursor-pointer" size={20} color="#999BA7" />
             </button>
           </DialogTrigger>
@@ -100,7 +100,7 @@ export function SocialLinksEditorCard() {
 
       <hr />
 
-      <div className="flex flex-wrap gap-3 mt-3">
+      <div className="flex flex-wrap gap-4 mt-3">
         {Object.entries(links).map(([key, value]) => {
           const platform = socialPlatforms.find((p) => p.key === key);
           if (!platform || !value) return null;
@@ -111,7 +111,7 @@ export function SocialLinksEditorCard() {
               href={`https://${value}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 border rounded-xl hover:bg-gray-100 transition h-14 w-14 flex items-center justify-center"
+              className="p-3 border rounded-[16px] hover:bg-gray-100 transition h-14 w-14 flex items-center justify-center"
             >
               <Icon size={24} color="black" />
             </a>

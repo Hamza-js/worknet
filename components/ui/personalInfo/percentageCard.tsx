@@ -17,7 +17,7 @@ export function PercentageCard({
   const strokeDashoffset = 100 - percentage;
 
   return (
-    <Card className="flex flex-row items-center gap-[9px] px-6 py-4 rounded-[20px] border border-[#999BA7] w-full">
+    <Card className="flex flex-row items-center gap-[9px] px-5 rounded-[20px] border border-[#999BA7] w-full">
       <div className="relative w-24 h-24">
         {" "}
         {/* Increased from w-16 h-16 */}
@@ -45,7 +45,7 @@ export function PercentageCard({
             opacity={0.3}
           />
         </svg>
-        <div className="absolute inset-0 flex items-center justify-center text-base font-medium">
+        <div className="absolute inset-0 flex items-center justify-center text-[12px] font-medium text-black">
           {percentage}%
         </div>
       </div>

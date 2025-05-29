@@ -33,21 +33,21 @@ export function SummaryEditorCard() {
         </h2>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <button className="shadow-sm h-10 w-10 rounded-lg flex items-center justify-center">
+            <button className="shadow-lg h-10 w-10 rounded-lg flex items-center justify-center">
               <Pencil className="cursor-pointer" size={20} color="#999BA7" />
             </button>
           </DialogTrigger>
-          <DialogContent className="!max-w-none !w-[700px] py-6 px-12 rounded-4xl">
+          <DialogContent className="!max-w-none md:!w-[961px] py-6 px-12 rounded-[40px]">
             <DialogHeader>
               <DialogTitle className="text-center text-2xl font-bold">
-                Խմբագրել Ամփոփագիրը
+                Խմբագրել <strong>Ամփոփագիրը</strong>
               </DialogTitle>
             </DialogHeader>
 
             <Textarea
               value={tempSummary}
               onChange={(e) => setTempSummary(e.target.value)}
-              className="w-full mt-4 h-[200px] text-[16px] p-4 rounded-xl border border-black"
+              className="w-full mt-4 h-[200px] text-[20px] font-normal p-4 rounded-xl border !border-black"
             />
 
             <div className="flex justify-center mt-6">
