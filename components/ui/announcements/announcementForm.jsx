@@ -24,7 +24,7 @@ export function AnnouncementForm() {
   return (
     <div className="w-full bg-white flex flex-col items-center justify-center gap-[20px] px-[24px] py-[16px] rounded-[30px] border border-[#999BA7]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-2 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Վերնագիր
           </label>
@@ -33,7 +33,7 @@ export function AnnouncementForm() {
             className="h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]"
           />
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-2 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Կատեգորիա
           </label>
@@ -47,7 +47,7 @@ export function AnnouncementForm() {
             </SelectContent>
           </Select>
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-2 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Աշխատանքի տեսակը
           </label>
@@ -61,7 +61,7 @@ export function AnnouncementForm() {
             </SelectContent>
           </Select>
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-2 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Մարզ
           </label>
@@ -75,7 +75,7 @@ export function AnnouncementForm() {
             </SelectContent>
           </Select>
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-2 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Տարիքային խումբ
           </label>
@@ -84,7 +84,7 @@ export function AnnouncementForm() {
             className="h-[64px] p-6 gap-[10px] rounded-[16px] border font-montserratArm font-normal text-[16px] leading-[16px] tracking-[0%]"
           />
         </div>
-        <div>
+        <div className=" h-[94px] flex flex-col justify-between">
           <label className="block mb-2 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
             Սեռ
           </label>
@@ -102,7 +102,7 @@ export function AnnouncementForm() {
       </div>
 
       <div className="w-full h-full">
-        <label className="block mb-2 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
+        <label className="block mb-3 font-montserratArm font-semibold text-[16px] leading-[16px] tracking-[0%]">
           Նկարագրություն
         </label>
         <RichTextEditor value={editorContent} onChange={setEditorContent} />
